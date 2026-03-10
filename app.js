@@ -250,6 +250,7 @@ e.preventDefault();
 
 const name = document.getElementById("name").value;
 const email = document.getElementById("email").value;
+const phone = document.getElementById("phone").value;
 const message = document.getElementById("message").value;
 
 const page = window.location.href;
@@ -260,6 +261,7 @@ const text = `🚀 *Nuevo contacto desde tu portafolio*
 
 👤 *Nombre:* ${name}
 📧 *Email:* ${email}
+📱 Teléfono: ${phone}
 
 💬 *Mensaje:*
 ${message}
