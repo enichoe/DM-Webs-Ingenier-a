@@ -716,6 +716,40 @@
       background: radial-gradient(circle at 30% 30%, var(--accent-dim) 0%, transparent 50%);
     }
 
+    /* Imagenes responsivas dentro de las cards de proyecto */
+    .project-image .project-img {
+      display: block;
+      width: auto;
+      max-width: 80%;
+      max-height: 80%;
+      height: auto;
+      object-fit: contain;
+      z-index: 1;
+      transition: transform 0.3s ease, max-width 0.3s ease;
+    }
+
+    /* En pantallas muy grandes, hacer las imágenes más pequeñas (menos dominantes)
+       para que las cards se vean más limpias */
+    @media (min-width: 1200px) {
+      .project-image .project-img {
+        max-width: 60%;
+        max-height: 70%;
+      }
+      .project-image { min-height: 260px; }
+    }
+
+    /* Ajustes para tablets / pantallas medianas */
+    @media (max-width: 900px) {
+      .project-image { min-height: 240px; }
+      .project-image .project-img { max-width: 85%; }
+    }
+
+    /* En móviles reducir un poco el tamaño para mejor equilibrio visual */
+    @media (max-width: 480px) {
+      .project-image { min-height: 200px; }
+      .project-image .project-img { max-width: 78%; max-height: 78%; }
+    }
+
     .project-preview {
       font-family: 'JetBrains Mono', monospace;
       font-size: 4rem;
