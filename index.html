@@ -1,699 +1,560 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Básico -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO ELITE AGENCY -->
+    <title>DM Webs | Ingeniería Web</title>
+    <meta name="description" content="Diseño y desarrollo de sitios web que generan impacto inmediato. No hacemos webs, construimos activos financieros digitales de clase mundial.">
+    <meta name="keywords" content="diseño web elite, saas premium, landing pages alto rendimiento, desarrollo web lujo, agencias marketing premium">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- SEO -->
-  <title>Ernesto Nicho Espinoza | Software Developer</title>
-
-  <meta name="description" content="Portafolio profesional de Ernesto Nicho Espinoza. Desarrollador de aplicaciones web modernas, SaaS y soluciones digitales para empresas y startups.">
-
-  <meta name="keywords" content="software developer, desarrollador web, SaaS developer, JavaScript, Node.js, aplicaciones web">
-
-  <meta name="author" content="Ernesto Nicho Espinoza">
-
-  <!-- Color navegador móvil -->
-  <meta name="theme-color" content="#0f172a">
-
-  <!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
-  <meta property="og:title" content="Ernesto Nicho Espinoza | Software Developer">
-  <meta property="og:description" content="Desarrollador de aplicaciones web modernas y plataformas SaaS. Mira mis proyectos y contáctame.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://enichoespinoza.vercel.app/">
-  <meta property="og:image" content="banner.png">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ernesto Nicho Espinoza | Software Developer">
-  <meta name="twitter:description" content="Portafolio de desarrollo web, aplicaciones SaaS y soluciones digitales modernas.">
-  <meta name="twitter:image" content="banner.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png">
-
-  <!-- Performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="stylesChat.css">
-
-  <!-- Structured Data (Google Developer Profile) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Ernesto Nicho Espinoza",
-    "jobTitle": "Software Developer",
-    "url": "https://enichoespinoza.vercel.app/",
-    "sameAs": [
-      "https://github.com/enichoe"
-      
-    ],
-    "knowsAbout": [
-      "JavaScript",
-      "Web Development",
-      "SaaS Development",
-      "Node.js",
-      "Supabase",
-      "Frontend Development",
-      "Backend Development"
-    ]
-  }
-  </script>
-
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Loader -->
-  <div class="loader" id="loader">
-    <div class="loader-content">
-      <div class="loader-name">Ernesto Nicho Espinoza 💻</div>
-      <div class="loader-bar">
-        <div class="loader-progress"></div>
-      </div>
+    <!-- Advanced Cursor Layer -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-trail" id="cursor-trail"></div>
+
+    <!-- Background Wow Layer -->
+    <div class="bg-mesh">
+        <div class="mesh-orb mesh-1"></div>
+        <div class="mesh-orb mesh-2"></div>
     </div>
-  </div>
 
-  <!-- Custom Cursor -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-trail" id="cursor-trail"></div>
-
-  <!-- Background Elements -->
-  <canvas id="particles-canvas"></canvas>
-  <div class="gradient-orb orb-1"></div>
-  <div class="gradient-orb orb-2"></div>
-
-  <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">ernesto<span>.</span>dev</a>
-      <ul class="nav-links">
-        <li><a href="#about">Sobre mi</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#process">Proceso</a></li>
-      </ul>
-      <a href="#contact" class="nav-cta">Contactar</a>
-      <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobile-menu">
-    <ul class="mobile-menu-links">
-      <li><a href="#about">Sobre mi</a></li>
-      <li><a href="#skills">Habilidades</a></li>
-      <li><a href="#projects">Proyectos</a></li>
-      <li><a href="#process">Proceso</a></li>
-      <li><a href="#contact">Contactar</a></li>
-    </ul>
-  </div>
-  <!-- Chatbot Container -->
-  <div id="chatbot-container">
-    <!-- Toggle Button -->
-    <button class="chatbot-toggle" id="chatbotToggle" aria-label="Abrir chat de ventas">
-      <span class="notification-dot"></span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-      </svg>
-    </button>
-
-    <!-- Chat Window -->
-    <div class="chatbot-window" id="chatbotWindow">
-      <!-- Header -->
-      <div class="chatbot-header">
-        <div class="chatbot-avatar">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 8V4H8"></path>
-            <rect width="16" height="12" x="4" y="8" rx="2"></rect>
-            <path d="M2 14h2"></path>
-            <path d="M20 14h2"></path>
-            <path d="M15 13v2"></path>
-            <path d="M9 13v2"></path>
-          </svg>
-        </div>
-        <div class="chatbot-info">
-          <div class="chatbot-name">Asistente de Ernesto</div>
-          <div class="chatbot-status">En linea - Responde al instante</div>
-        </div>
-        <button class="chatbot-close" id="chatbotClose" aria-label="Cerrar chat">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 6L6 18"></path>
-            <path d="M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Messages -->
-      <div class="chatbot-messages" id="chatbotMessages">
-        <!-- Messages will be inserted here -->
-      </div>
-
-      <!-- Input Area -->
-      <div class="chatbot-input-area">
-        <div class="chatbot-input-wrapper">
-          <textarea 
-            class="chatbot-input" 
-            id="chatbotInput" 
-            placeholder="Escribe tu mensaje..." 
-            rows="1"
-            aria-label="Escribe tu mensaje"
-          ></textarea>
-          <button class="chatbot-send" id="chatbotSend" aria-label="Enviar mensaje">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 2L11 13"></path>
-              <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <div class="chatbot-footer">
-        <a href="#" target="_blank">Desarrollado por Ernesto</a>
-      </div>
-    </div>
-  </div>
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="hero-badge">
-          <span class="dot"></span>
-          Disponible para proyectos
-        </div>
-        <h1 class="hero-title">
-          ERNESTO<br>
-          <span class="accent">NICHO ESPINOZA</span>
-        </h1>
-        <p class="hero-subtitle">Software Developer</p>
-        <p class="hero-tagline">
-          Construyo software moderno que transforma ideas en productos digitales innovadores.
-        </p>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-            </svg>
-            Ver proyectos
-          </a>
-          <a href="#contact" class="btn btn-secondary">
-            Contactar
-          </a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-number" data-count="50">0</span>
-            <span class="stat-label">Proyectos completados</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number" data-count="30">0</span>
-            <span class="stat-label">Clientes satisfechos</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number" data-count="2">0</span>
-            <span class="stat-label">Anos de experiencia</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-      <div class="section-inner">
-        <div class="about-grid">
-          <div class="about-content reveal">
-            <div class="section-header">
-              <p class="section-label">// Sobre mi</p>
-              <h2 class="section-title">Creando soluciones digitales que importan</h2>
-            </div>
-            <p>
-              Soy un desarrollador de software apasionado por crear <strong>productos digitales innovadores</strong> que resuelven problemas reales. Mi enfoque combina limpieza de codigo, arquitectura escalable y experiencias de usuario excepcionales.
-            </p>
-            <p>
-              Me especializo en el desarrollo de <strong>aplicaciones web modernas</strong>, plataformas SaaS y sistemas de automatizacion. Cada proyecto es una oportunidad para superar expectativas y entregar soluciones que generan impacto real.
-            </p>
-            <p>
-              Creo firmemente que el mejor software es aquel que <strong>simplicidad y potencia</strong> coexisten en armonia.
-            </p>
-          </div>
-          <div class="about-visual reveal reveal-delay-2">
-            <div class="code-window">
-              <div class="code-header">
-                <span class="code-dot red"></span>
-                <span class="code-dot yellow"></span>
-                <span class="code-dot green"></span>
-              </div>
-              <div class="code-body">
-                <div class="code-line"><span class="code-keyword">const</span> developer = {</div>
-                <div class="code-line">  <span class="code-property">nombre</span>: <span class="code-string">"Ernesto"</span>,</div>
-                <div class="code-line">  <span class="code-property">rol</span>: <span class="code-string">"Software Developer"</span>,</div>
-                <div class="code-line">  <span class="code-property">pasiones</span>: [</div>
-                <div class="code-line">    <span class="code-string">"Web Apps"</span>,</div>
-                <div class="code-line">    <span class="code-string">"SaaS"</span>,</div>
-                <div class="code-line">    <span class="code-string">"Automatizacion"</span></div>
-                <div class="code-line">  ],</div>
-                <div class="code-line">  <span class="code-property">disponible</span>: <span class="code-keyword">true</span></div>
-                <div class="code-line">};</div>
-                <div class="code-line"><span class="code-comment">// Construyendo el futuro, un commit a la vez.</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-      <div class="section-inner">
-        <div class="section-header reveal">
-          <p class="section-label">// Habilidades</p>
-          <h2 class="section-title">Tecnologías con las que construyo</h2>
-        </div>
-        <div class="skills-grid">
-          <div class="skill-card reveal">
-            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-              <path d="M2 17l10 5 10-5"></path>
-              <path d="M2 12l10 5 10-5"></path>
-            </svg>
-            <h3 class="skill-title">Frontend Development</h3>
-            <p class="skill-desc">Interfaces modernas, responsivas y accesibles con las mejores practicas de la industria.</p>
-            <div class="skill-tags">
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">HTML5</span>
-              <span class="skill-tag">CSS3</span>
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">Bootstrap</span>
-              <span class="skill-tag">tailwind CSS</span>
-            </div>
-          </div>
-          <div class="skill-card reveal reveal-delay-1">
-            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-              <line x1="8" y1="21" x2="16" y2="21"></line>
-              <line x1="12" y1="17" x2="12" y2="21"></line>
-            </svg>
-            <h3 class="skill-title">Backend Development</h3>
-            <p class="skill-desc">Arquitecturas robustas, APIs escalables y logica de negocio eficiente.</p>
-            <div class="skill-tags">
-              <span class="skill-tag">Node.js</span>
-              <span class="skill-tag">Python</span>
-              
-            </div>
-          </div>
-          <div class="skill-card reveal reveal-delay-2">
-            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-            </svg>
-            <h3 class="skill-title">Bases de Datos</h3>
-            <p class="skill-desc">Diseno, optimizacion y gestion de datos para aplicaciones de alto rendimiento.</p>
-            <div class="skill-tags">
-              <span class="skill-tag">MySQL</span>
-              <span class="skill-tag">PostgreSQL</span>
-              <span class="skill-tag">MongoDB</span>
-              <span class="skill-tag">Supabase</span>
-            </div>
-          </div>
-          <div class="skill-card reveal reveal-delay-3">
-            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-            </svg>
-            <h3 class="skill-title">Automatizacion</h3>
-            <p class="skill-desc">Flujos automatizados que optimizan procesos y multiplican la productividad.</p>
-            <div class="skill-tags">
-              <span class="skill-tag">WhatsApp API</span>
-              <span class="skill-tag">Webhooks</span>
-              <span class="skill-tag">Scripts</span>
-            </div>
-          </div>
-          <div class="skill-card reveal reveal-delay-4">
-            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-              <polyline points="22,4 12,14.01 9,11.01"></polyline>
-            </svg>
-            <h3 class="skill-title">SaaS Development</h3>
-            <p class="skill-desc">Plataformas como servicio completas, desde concepcion hasta produccion.</p>
-            <div class="skill-tags">
-              <span class="skill-tag">Multi-tenancy</span>
-              <span class="skill-tag">Auth</span>
-              <span class="skill-tag">Payments</span>
-            </div>
-          </div>
-
-          <!-- Projects Section 
-          <div class="skill-card reveal reveal-delay-4">
-            <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-              <polyline points="3.27,6.96 12,12.01 20.73,6.96"></polyline>
-              <line x1="12" y1="22.08" x2="12" y2="12"></line>
-            </svg>
-            <h3 class="skill-title">E-commerce</h3>
-            <p class="skill-desc">Tiendas online optimizadas para conversion y experiencias de compra fluidas.</p>
-            <div class="skill-tags">
-              <span class="skill-tag">WooCommerce</span>
-              <span class="skill-tag">Shopify</span>
-              <span class="skill-tag">Custom</span>
-            </div>
-          </div>
-        </div>
-      </div>-->
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-      <div class="section-inner">
-        <div class="section-header reveal">
-          <p class="section-label">// Proyectos</p>
-          <h2 class="section-title">Trabajo destacado</h2>
-        </div>
-        <div class="projects-grid">
-          <article class="project-card reveal">
-            <div class="project-image">
-  <img src="pideClick.png" alt="PideClick SaaS plataforma de pedidos" class="project-img">
-</div>
-            <div class="project-content">
-              <span class="project-type">SaaS Platform</span>
-              <h3 class="project-name">PideClick</h3>
-<p class="project-desc">
-Plataforma SaaS para restaurantes que permite crear menús digitales, recibir pedidos online y gestionarlos desde 
-un panel administrativo, enviando automáticamente los pedidos por WhatsApp para una atención rápida y organizada.
-</p>
-              <div class="project-tech">
-                <span class="project-tech-tag">HTML CSS JS</span>
-                <span class="project-tech-tag">Tailwind CSS</span>
-                <span class="project-tech-tag">Next.js</span>
-                <span class="project-tech-tag">Supabase</span>
-              </div>
-              <div class="project-links">
-                <a href="https://pide-click.vercel.app/" class="project-link primary">Ver</a>
-                <a href="#" class="project-link secondary">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                  Codigo
-                </a>
-              </div>
-            </div>
-          </article>
-          
-          <article class="project-card reveal">
-            <div class="project-image">
-              <img src="dz.png" alt="Dz plataforma de pedidos" class="project-img">
-            </div>
-            <div class="project-content">
-              <span class="project-type">E-commerce</span>
-              <h3 class="project-name">TechStore</h3>
-              <p class="project-desc">Tienda virtual moderna con carrito inteligente, sistema de tracking de pedidos y panel de administracion completo para poder agregar , modificar y eliminar productos y categorias.</p>
-              <div class="project-tech">
-                <span class="project-tech-tag">PHP</span>
-                <span class="project-tech-tag">MySQL</span>
-                <span class="project-tech-tag">JavaScript</span>
-                <span class="project-tech-tag">PayPal API</span>
-              </div>
-              <div class="project-links">
-                <a href="https://dz-shielding-tactical.vercel.app/" class="project-link primary">Ver</a>
-                <a href="#" class="project-link secondary">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                  Codigo
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-image">
-              <img src="car.webp" alt="Dz plataforma de pedidos" class="project-img">
-            </div>
-            <div class="project-content">
-              <span class="project-type">Aplicación Web - Taller Automotriz</span>
-              <h3 class="project-name">WhatsApp Bot</h3>
-              <p class="project-desc">Sistema de automatizacion para WhatsApp Business con respuestas inteligentes, integracion con CRM, envio masivo y analiticas de conversacion.</p>
-              <div class="project-tech">
-                <span class="project-tech-tag">Node.js</span>
-                <span class="project-tech-tag">WhatsApp API</span>
-                <span class="project-tech-tag">MongoDB</span>
-                <span class="project-tech-tag">Socket.io</span>
-              </div>
-              <div class="project-links">
-                <a href="https://tallercar.vercel.app" class="project-link primary">Ver</a>
-                <a href="#" class="project-link secondary">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                  Codigo
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-image">
-              <img src="veterinaria.webp" alt="Veterinaria plataforma de pedidos" class="project-img">
-            </div>
-            <div class="project-content">
-              <span class="project-type">Web App</span>
-              <h3 class="project-name">VetCare</h3>
-              <p class="project-desc">Sistema de pedidos online para restaurantes con menu digital, QR codes, seguimiento en tiempo real y panel de administracion para gestion de ordenes.</p>
-              <div class="project-tech">
-                <span class="project-tech-tag">React</span>
-                <span class="project-tech-tag">Firebase</span>
-                <span class="project-tech-tag">PWA</span>
-                <span class="project-tech-tag">QR API</span>
-              </div>
-              <div class="project-links">
-                <a href="https://veterinariaperu.vercel.app/" class="project-link primary">Ver</a>
-                <a href="#" class="project-link secondary">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                  Codigo
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process" id="process">
-      <div class="section-inner">
-        <div class="section-header reveal">
-          <p class="section-label">// Proceso</p>
-          <h2 class="section-title">Como trabajo</h2>
-        </div>
-        <div class="process-grid">
-          <div class="process-step reveal">
-            <div class="process-number">01</div>
-            <h3 class="process-title">Descubrimiento</h3>
-            <p class="process-desc">Entiendo tu vision, objetivos y requisitos para definir el alcance del proyecto.</p>
-          </div>
-          <div class="process-step reveal reveal-delay-1">
-            <div class="process-number">02</div>
-            <h3 class="process-title">Diseño</h3>
-            <p class="process-desc">Creo prototipos y arquitecturas que garantizan una solucion escalable y elegante.</p>
-          </div>
-          <div class="process-step reveal reveal-delay-2">
-            <div class="process-number">03</div>
-            <h3 class="process-title">Desarrollo</h3>
-            <p class="process-desc">Construyo con codigo limpio, pruebas continuas y entregas iterativas.</p>
-          </div>
-          <div class="process-step reveal reveal-delay-3">
-            <div class="process-number">04</div>
-            <h3 class="process-title">Lanzamiento</h3>
-            <p class="process-desc">Deploy, monitoreo y soporte continuo para asegurar el exito de tu producto.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-      <div class="section-inner">
-        <div class="contact-grid">
-          <div class="contact-content reveal">
-            <h2>¿Tienes una idea? Transformémosla en un proyecto real.</h2>
-<p>
-Desarrollo aplicaciones web modernas para emprendedores, negocios y startups.  
-Si tienes una visión y quieres convertirla en una plataforma funcional, estaré encantado de ayudarte a hacerla realidad.
-</p>
-            <div class="contact-socials">
-              <a href="#" class="social-link" aria-label="GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+    <!-- ULTIMATE NAVIGATION -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <svg viewBox="0 0 200 40" class="logo-svg">
+                    <defs>
+                        <linearGradient id="logoGradElite" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#00A8E8;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M10 5 L5 20 L10 35" fill="none" stroke="url(#logoGradElite)" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M60 5 L65 20 L60 35" fill="none" stroke="url(#logoGradElite)" stroke-width="3" stroke-linecap="round"/>
+                    <text x="35" y="28" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="24" fill="white">DM</text>
+                    <text x="80" y="28" font-family="Plus Jakarta Sans, sans-serif" font-weight="400" font-size="20" fill="#888888">Webs</text>
                 </svg>
-              </a>
-              <a href="#" class="social-link" aria-label="LinkedIn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                  <rect x="2" y="9" width="4" height="12"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-              </a>
-              <a href="#" class="social-link" aria-label="Twitter">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                </svg>
-              </a>
-              <a href="https://wa.me/972498691" class="social-link" aria-label="WhatsApp">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <form id="contactForm" class="contact-form reveal reveal-delay-2">
-            <div class="form-group">
-              <label class="form-label" for="name">Nombre</label>
-              <input type="text" id="name" class="form-input" placeholder="Tu nombre" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="email">Email</label>
-              <input type="email" id="email" class="form-input" placeholder="tu@email.com" required>
-            </div>
-            <div class="form-group">
-<label class="form-label" for="phone">Teléfono</label>
-<input type="tel" id="phone" class="form-input" placeholder="Tu número de WhatsApp">
-</div>
-            <div class="form-group">
-              <label class="form-label" for="message">Mensaje</label>
-              <textarea id="message" class="form-input" placeholder="Cuentame sobre tu proyecto..." required></textarea>
-            </div>
-            <button type="submit" class="form-submit">Enviar mensaje</button>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER PREMIUM -->
-<footer class="footer" id="footer">
- 
-  
-  <!-- Top Section with CTA -->
-  
-
-  <!-- Main Footer Content -->
-  <div class="footer-main">
-    <div class="footer-container">
-      <!-- Brand Column -->
-      
-      <!-- Links Columns -->
-      <div class="footer-links-grid">
-        <!-- Navigation -->
-        <div class="footer-column">
-          <h4 class="footer-heading">Navegacion</h4>
-          <ul class="footer-list">
-            <li><a href="#about">Sobre mi</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#process">Proceso</a></li>
-          </ul>
-        </div>
-
-        <!-- Services -->
-        <div class="footer-column">
-          <h4 class="footer-heading">Servicios</h4>
-          <ul class="footer-list">
-            <li><a href="#" class="footer-link">Desarrollo Web</a></li>
-            <li><a href="#" class="footer-link">Aplicaciones SaaS</a></li>
-            <li><a href="#" class="footer-link">E-commerce</a></li>
-            <li><a href="#" class="footer-link">Automatizacion</a></li>
-            <li><a href="#" class="footer-link">Consultoria</a></li>
-          </ul>
-        </div>
-
-        <!-- Connect -->
-        <div class="footer-column">
-          <h4 class="footer-heading">Connect</h4>
-          <ul class="footer-list">
-            <li>
-              <a href="mailto:ernesto@dev.com" class="footer-link footer-link-email">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                ernesto@dev.com
-              </a>
-            </li>
-            <li>
-              <a href="https://wa.me/123456789" class="footer-link footer-link-whatsapp">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                </svg>
-                WhatsApp
-              </a>
-            </li>
-          </ul>
-          
-          
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bottom Bar -->
-  <div class="footer-bottom">
-    <div class="footer-container">
-      <div class="footer-bottom-content">
-        <div class="footer-copyright">
-          <span class="copyright-year">2024</span>
-          <span class="copyright-text">Ernesto Alfredo Nicho Espinoza. Todos los derechos reservados.</span>
-        </div>
-        
-        <div class="footer-meta">
-          <span class="footer-location">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-            Lima, Peru
-          </span>
-          <span class="footer-divider"></span>
-          <span class="footer-tech">
-            Hecho con 💙
+            </a>
             
-            y mucho codigo
-          </span>
-        </div>
-        
-        <div class="footer-legal">
-          <a href="#" class="legal-link">Privacidad</a>
-          <a href="#" class="legal-link">Terminos</a>
-        </div>
-      </div>
-    </div>
-  </div>
+            <ul class="nav-links">
+                <li><a href="#soluciones">Soluciones</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#stats">Ciencia</a></li>
+                <li><a href="#faq">Dudas</a></li>
+            </ul>
 
-  <!-- Decorative Code -->
-  <div class="footer-code">
-    <code>&lt;/&gt;</code>
-  </div>
+            <a href="https://wa.me/972498691?text=🚀%20Hola,%20quiero%20un%20sistema%20web%20que%20genere%20clientes" class="nav-cta" target="_blank" rel="noopener">🚀 Iniciar Proyecto</a>
+            
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ELITE MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-close" id="mobile-close" aria-label="Cerrar Menú">&times;</button>
+        <ul class="mobile-menu-links">
+            <li><a href="#soluciones">Soluciones</a></li>
+            <li><a href="#portafolio">Portafolio</a></li>
+            <li><a href="#stats">La Ciencia</a></li>
+            <li><a href="#faq">Preguntas Frecuentes</a></li>
+        </ul>
+        <!--<a href="https://wa.me/972498691?text=🚀%20Hola,%20quiero%20un%20sistema%20web%20que%20genere%20clientes" class="nav-cta">
+    🚀 Iniciar Proyecto
+</a> -->
+    </div>
+
+    <main>
+        <!-- HERO SECTION: INGENIERÍA QUE GENERA RESULTADOS -->
+<section class="hero" id="home">
+    <div class="hero-inner">
+        <div class="hero-content">
+
+            <div class="hero-badge reveal">
+                <span class="dot"></span>
+                Ingeniería Web de Alto Rendimiento
+            </div>
+
+            <h1 class="hero-title reveal">
+                Creamos sistemas web que <br>
+                <span class="accent">generan clientes automáticamente</span>
+            </h1>
+
+            <p class="hero-tagline reveal">
+    Diseñamos sistemas web optimizados para convertir visitas en clientes, automatizar procesos y hacer crecer tu negocio de forma constante.
+</p>
+
+            <div class="hero-buttons reveal">
+                <a href="https://wa.me/972498691?text=🚀%20Hola!%20Quiero%20una%20web%20que%20me%20genere%20clientes%20automáticamente" 
+                   class="btn btn-primary" target="_blank" rel="noopener">
+                    🚀 Quiero más clientes
+                </a>
+
+                <a href="#portafolio" class="btn btn-secondary">
+                    Ver resultados reales
+                </a>
+            </div>
+            <p style="margin-top:1rem; font-size:0.85rem; color:#888;">
+    +20 proyectos desarrollados • Clientes en LATAM • Resultados reales
+</p>
+
+        </div>
+
+        <div class="hero-visual reveal">
+            <img src="mockup.png" alt="Sistema Web de Conversión DM Webs" class="hero-mockup">
+        </div>
+    </div>
+</section>
+
+        <!-- SECTION: DIAGNÓSTICO REAL DEL NEGOCIO -->
+<section class="pain-section" id="diagnostico">
+    <div class="section-inner">
+
+        <div class="section-label reveal">Diagnóstico Digital</div>
+
+        <h2 class="section-title reveal">
+            Si tu web no está optimizada… <br>
+            estás perdiendo clientes todos los días
+        </h2>
+
+        <div class="pain-grid">
+
+    <div class="pain-card reveal">
+        <span class="pain-icon">🧠</span>
+        <h3>No generas confianza</h3>
+        <p>
+            Tu página no transmite autoridad. El cliente entra, duda… y termina comprando a alguien que se ve más profesional.
+        </p>
+    </div>
+
+    <div class="pain-card reveal">
+        <span class="pain-icon">💸</span>
+        <h3>Tienes visitas pero no ventas</h3>
+        <p>
+            La gente entra a tu web, pero no te escribe. No es falta de tráfico… es falta de estrategia de conversión.
+        </p>
+    </div>
+
+    <div class="pain-card reveal">
+        <span class="pain-icon">🤖</span>
+        <h3>Dependes de tu tiempo</h3>
+        <p>
+            Respondes manualmente cada cliente. Sin automatización, estás perdiendo oportunidades mientras no estás disponible.
+        </p>
+    </div>
+
+</div>
+    </div>
+</section>
+
+        <!-- SECTION: SOLUCIÓN (INGENIERÍA DE CONVERSIÓN) -->
+<section class="solution-section" id="soluciones">
+    <div class="section-inner">
+        <div class="solution-grid">
+
+            <div class="solution-content reveal">
+
+                <div class="section-label">Solución Estratégica</div>
+
+                <h2 class="section-title">
+                    No necesitas otra página web… <br>
+                    <span class="accent-text">necesitas un sistema que genere clientes</span>
+                </h2>
+
+                <p class="hero-tagline">
+                    En DM Webs combinamos ingeniería web, psicología de ventas y automatización para crear plataformas que convierten visitas en clientes reales de forma constante.
+                </p>
+
+                <div class="benefit-row">
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⚡</div>
+                        <div class="benefit-info">
+                            <strong>Velocidad que convierte</strong>
+                            <p>
+                                Tu web carga en segundos, evitando que pierdas clientes antes de que vean lo que ofreces.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🧲</div>
+                        <div class="benefit-info">
+                            <strong>Diseño que vende</strong>
+                            <p>
+                                Cada sección está pensada para guiar al usuario hacia una sola acción: contactarte.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🤖</div>
+                        <div class="benefit-info">
+                            <strong>Automatización inteligente</strong>
+                            <p>
+                                Integramos WhatsApp y sistemas automáticos para que no pierdas ningún cliente.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="https://wa.me/972498691?text=🚀%20Hola,%20quiero%20un%20sistema%20web%20que%20genere%20clientes" 
+                   class="btn btn-primary">
+                    🚀 Quiero mi sistema web
+                </a>
+
+            </div>
+
+            <div class="visual-stack reveal">
+                <img src="e3.jpg" alt="Sistema Web de Conversión DM Webs" class="hero-mockup" style="transform: rotate(0); width: 100%;">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <!-- SECTION: RESULTADOS REALES -->
+<section class="results-section" id="portafolio">
+    <div class="section-inner">
+
+        <div class="section-label reveal">Resultados Reales</div>
+
+        <h2 class="section-title reveal">
+            Sistemas que ya están generando ventas
+        </h2>
+        
+        <div class="results-grid">
+
+            <!-- Project 1 -->
+            <div class="result-card reveal">
+                <div class="result-visual">
+                    <img src="pideClick.png" alt="PideClick" class="result-img-full">
+                </div>
+                <div class="result-info">
+                    <span class="result-badge">Sistema SaaS</span>
+                    <h3>PideClick</h3>
+                    <p>
+                        PideClick es una plataforma SaaS diseñada para la optimización integral de restaurantes, permitiéndoles digitalizar y automatizar la gestión de pedidos en tiempo real. Facilita una experiencia de compra rápida, intuitiva y sin fricciones para los clientes, mientras incrementa las conversiones, reduce errores operativos y mejora la eficiencia del negocio. Ideal para restaurantes que buscan escalar sus ventas mediante tecnología moderna y procesos inteligentes.
+                    </p>
+                    <div class="result-footer">
+                        <a href="https://pide-click.vercel.app/" class="result-link" target="_blank">
+                            Ver cómo funciona ↗
+                        </a>
+                        <button class="like-btn" data-project="pideclick">
+                            <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                            <span class="like-count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="result-card reveal">
+                <div class="result-visual">
+                    <img src="dz.png" alt="Ecommerce" class="result-img-full">
+                </div>
+                <div class="result-info">
+                    <span class="result-badge">E-Commerce</span>
+                    <h3>Tienda Táctica</h3>
+                    <p>
+                        Tienda virtual diseñada estratégicamente para maximizar el ticket promedio y potenciar las ventas online. Ofrece una experiencia de compra optimizada para dispositivos móviles, con navegación intuitiva, carga rápida y procesos de pago simplificados. Ideal para negocios que buscan aumentar conversiones, fidelizar clientes y escalar sus ingresos mediante una plataforma moderna y eficiente.
+                    </p>
+                    <div class="result-footer">
+                        <a href="https://dz-shielding-tactical.vercel.app/" class="result-link" target="_blank">
+                            Ver resultados ↗
+                        </a>
+                        <button class="like-btn" data-project="tactica">
+                            <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                            <span class="like-count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="result-card reveal">
+                <div class="result-visual">
+                    <img src="car.webp" alt="Inmobiliaria" class="result-img-full">
+                </div>
+                <div class="result-info">
+                    <span class="result-badge">Captación de Leads</span>
+                    <h3>Taller Mecánico</h3> 
+                    <p>
+                        Plataforma digital diseñada para talleres mecánicos que buscan captar más clientes y optimizar la gestión de servicios. Permite a los usuarios agendar citas en línea de forma rápida y sencilla, consultar servicios disponibles y recibir atención eficiente. Incluye funcionalidades orientadas a mejorar la organización del taller, reducir tiempos de espera y aumentar la satisfacción del cliente mediante una experiencia moderna y confiable.
+                    </p>
+                    <div class="result-footer">
+                        <a href="https://tallercar.vercel.app/" class="result-link" target="_blank" >
+                            Ver concepto ↗
+                        </a>
+                        <button class="like-btn" data-project="taller">
+                            <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                            <span class="like-count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="hero-buttons reveal" style="justify-content: center; margin-top: 5rem;">
+            <a href="portafolio.html" class="btn btn-secondary" style="padding: 1.2rem 3rem; font-size: 1rem;">
+                🎨 Ver todos los proyectos (+20)
+            </a>
+        </div>
+
+        </div>
+    </div>
+</section>
+
+        <!-- SECTION: RESULTADOS QUE GENERAMOS -->
+<section class="authority-section" id="stats">
+    <div class="section-inner">
+        
+        <div class="section-label reveal">Resultados Reales</div>
+        
+        <h2 class="section-title reveal">
+            No hacemos páginas web… <br>
+            creamos máquinas que generan clientes
+        </h2>
+
+        <div class="stats-grid">
+
+            <div class="stat-card reveal">
+                <span class="stat-value">+Clientes</span>
+                <span class="stat-label">Más personas te contactan</span>
+                <p class="stat-desc">
+                    Diseñamos tu web para que cada visita tenga una sola misión: escribirte y convertirse en cliente.
+                </p>
+            </div>
+
+            <div class="stat-card reveal">
+                <span class="stat-value">+Ventas</span>
+                <span class="stat-label">Convierte visitas en dinero</span>
+                <p class="stat-desc">
+                    Aplicamos estrategias reales de venta para que tu web deje de ser decoración y empiece a facturar.
+                </p>
+            </div>
+
+            <div class="stat-card reveal">
+                <span class="stat-value">24/7</span>
+                <span class="stat-label">Tu negocio nunca se detiene</span>
+                <p class="stat-desc">
+                    Tu página trabaja por ti todo el día, captando clientes incluso cuando estás descansando.
+                </p>
+            </div>
+
+            <div class="stat-card reveal">
+                <span class="stat-value">Instantáneo</span>
+                <span class="stat-label">Contacto inmediato</span>
+                <p class="stat-desc">
+                    Integramos WhatsApp y sistemas automáticos para que no pierdas ni un solo cliente interesado.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <!-- SECTION: CONSULTORÍA ESTRATÉGICA -->
+<section class="faq-section" id="faq">
+    <div class="section-inner">
+
+        <div class="section-label reveal">Consultoría Estratégica</div>
+
+        <h2 class="section-title reveal">
+            Resolvemos tus dudas… <br>
+            antes de que tomes la decisión
+        </h2>
+
+        <div class="faq-grid">
+
+            <div class="faq-item reveal">
+                <h3>¿Por qué este servicio tiene un valor alto?</h3>
+                <p>
+                    Porque no desarrollamos páginas web básicas. Creamos sistemas diseñados para generar clientes y ventas. 
+                    Es una inversión enfocada en crecimiento, no un gasto en diseño.
+                </p>
+            </div>
+
+            <div class="faq-item reveal">
+                <h3>¿En cuánto tiempo estará lista mi web?</h3>
+                <p>
+                    Entre 10 y 20 días dependiendo del proyecto. Cada sistema se desarrolla con enfoque en rendimiento, conversión y calidad profesional.
+                </p>
+            </div>
+
+            <div class="faq-item reveal">
+                <h3>¿Puedo personalizar el diseño?</h3>
+                <p>
+                    Sí. Trabajamos contigo en cada etapa para asegurar que el resultado represente tu negocio, pero optimizado para vender.
+                </p>
+            </div>
+
+            <div class="faq-item reveal">
+                <h3>¿Qué pasa después del lanzamiento?</h3>
+                <p>
+                    No te dejamos solo. Incluimos soporte, mantenimiento y mejoras para que tu web siga funcionando y generando resultados.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+        <!-- SECTION: CIERRE DE CONVERSIÓN -->
+<section class="offer-section" id="metodo">
+    <div class="section-inner">
+
+        <div class="offer-card reveal">
+
+            <span class="section-label">Activación de Sistema</span>
+
+            <h2 class="section-title">
+                Tu web puede empezar a generar clientes <br>
+                <span class="accent-text">en los próximos días</span>
+            </h2>
+
+            <p class="hero-tagline" style="margin: 0 auto 3rem;">
+                Diseñamos sistemas web listos para convertir visitas en ventas desde el primer día. 
+                Si tu negocio aún no tiene una estructura optimizada, estás perdiendo oportunidades ahora mismo.
+            </p>
+
+            <div class="hero-buttons" style="justify-content: center;">
+                <a href="https://wa.me/972498691?text=🚀%20Hola,%20quiero%20un%20sistema%20web%20que%20genere%20clientes" class="btn btn-primary" target="_blank" rel="noopener">
+                    🚀 Quiero empezar ahora
+                </a>
+            </div>
+
+            <span class="urgency-badge">
+                ⚠️ Solo 2 proyectos activos por mes • Queda 1 disponible
+            </span>
+
+        </div>
+
+    </div>
+</section>
+    </main>
+
+
+    
+    <!-- SECTION: ELITE FOOTER (ENGINEERING & RESULTS) -->
+<footer class="elite-footer">
+    <div class="footer-grid">
+
+        <!-- Branding & Engineering Vision -->
+        <div class="footer-col reveal">
+            <a href="#" class="nav-logo" style="margin-bottom: 2rem; display: block;">
+                <svg viewBox="0 0 200 40" class="logo-svg">
+                    <defs>
+                        <linearGradient id="logoGradFooterGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#00A8E8;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <text x="0" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="28" fill="url(#logoGradFooterGold)">DM Webs</text>
+                </svg>
+            </a>
+
+            <p class="footer-desc">
+                Ingeniería web orientada a conversión. Diseñamos sistemas digitales que transforman tráfico en clientes y procesos en ingresos automatizados.
+            </p>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                <span class="status-text">Sistema en ejecución • Captación activa 24/7</span>
+            </div>
+        </div>
+
+        <!-- Operation & Credibility -->
+        <div class="footer-col reveal">
+            <h4>Arquitectura del Sistema</h4>
+            <ul class="footer-info">
+                <li><strong>Base operativa:</strong> Lima, Perú</li>
+                <li><strong>Alcance:</strong> LATAM (remoto)</li>
+                <li><strong>Enfoque:</strong> Conversión, velocidad y automatización</li>
+            </ul>
+        </div>
+
+        <!-- Strategic Navigation -->
+        <div class="footer-col reveal">
+            <h4>Ingeniería Aplicada</h4>
+            <ul class="footer-links">
+                <li><a href="#soluciones">Sistemas Web</a></li>
+                <li><a href="#portafolio">Resultados</a></li>
+                <li><a href="#stats">Optimización</a></li>
+                <li><a href="#faq">Consultoría</a></li>
+            </ul>
+        </div>
+
+        <!-- Conversion Engine -->
+        <div class="footer-col reveal">
+            <h4>Activar Sistema</h4>
+            <a href="https://wa.me/972498691?text=🚀%20Hola,%20quiero%20un%20sistema%20web%20que%20genere%20clientes" class="footer-cta-btn" target="_blank">
+                🚀 Iniciar proyecto
+            </a>
+
+            <p style="margin-top: 1.5rem; font-size: 0.8rem; color: #888;">
+                Cupos limitados • Respuesta en minutos • Diagnóstico gratuito
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 DM WEBS. Sistemas diseñados para generar clientes.</p>
+
+        <div class="footer-legal">
+            <a href="#">Privacidad</a>
+            <a href="#">Términos</a>
+        </div>
+    </div>
 </footer>
 
+    <!-- ADVISOR CHATBOT ELITE -->
+    <div class="chatbot-toggle" id="chatbotToggle">
+        <span style="font-size:1.4rem; line-height:1;">🤖</span>
+    </div>
 
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+                <div style="width:38px;height:38px;border-radius:10px;background:var(--gradient-blue);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.4rem;">
+                    🤖
+                </div>
+                <div>
+                    <h4 style="font-weight:800;font-size:0.9rem;line-height:1.2;">DM Webs AI</h4>
+                    <p style="font-size:0.7rem;color:#25d366;display:flex;align-items:center;gap:4px;">
+                        <span style="width:6px;height:6px;background:#25d366;border-radius:50%;display:inline-block;animation:statusFade 2s infinite;"></span>
+                        Sistema activo
+                    </p>
+                </div>
+            </div>
+            <button class="chatbot-close" id="chatbotClose" aria-label="Cerrar chat">✕</button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages"></div>
+        <div class="chatbot-input-area">
+            <textarea id="chatbotInput" placeholder="Escribe tu consulta estratégica..." rows="1"></textarea>
+            <button id="chatbotSend" style="background:transparent; border:none; color:var(--accent); cursor:pointer;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </div>
+    </div>
 
-<script src="app.js"></script>
-<script src="appChat.js"></script>
+    <script src="app.js" defer></script>
+    <script src="appChat.js" defer></script>
 </body>
 </html>

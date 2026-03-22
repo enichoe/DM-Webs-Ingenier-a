@@ -1,5 +1,4 @@
-
-    // ========================================
+// ========================================
     // CHATBOT VENDEDOR - SISTEMA INTELIGENTE
     // ========================================
 
@@ -39,128 +38,101 @@
       let sendBtn = null;
       let closeBtn = null;
 
-      // ===== BASE DE DATOS DE RESPUESTAS =====
+
+      // ========================================
+      // 🧠 CEREBRO VENDEDOR - DM WEBS CLOSER
+      // ========================================
       const RESPONSES = {
         greeting: {
-          message: `Hola, estoy ayudando a ${CONFIG.developerName}, desarrollador de software, a analizar nuevos proyectos.\n\n¿Estás buscando crear algún sistema, aplicación o página web para tu negocio?`,
+          message: `Hola. Soy el consultor estratégico de **DM Webs**.\n\nNo estoy aquí para venderte un diseño, estoy aquí para resolver un problema de negocio. Para saber si podemos ayudarte, necesito ser directo:\n\n**¿Tu presencia digital actual te está generando dinero o solo te está costando tiempo?**`,
           quickReplies: [
-            'Crear una pagina web',
-            'Crear una aplicacion web',
-            'Automatizar procesos',
-            'Crear una tienda online',
-            'Solo estoy mirando'
+            'Tengo web, pero no vende',
+            'No tengo presencia digital',
+            'Quiero automatizar ventas',
+            'Solo estoy investigando'
           ]
         },
 
         projectTypes: {
-          'Crear una pagina web': {
-            message: 'Excelente elección. Una página web profesional puede ser el activo digital más importante para tu negocio.\n\n¿Es para un negocio que ya está funcionando o es un proyecto nuevo?',
-            quickReplies: ['Negocio existente', 'Proyecto nuevo', 'Ambos casos'],
-            score: 15,
-            type: 'web'
-          },
-          'Crear una aplicacion web': {
-            message: 'Las aplicaciones web son una gran inversión. Permiten automatizar procesos y escalar operaciones.\n\n¿Qué tipo de problema o necesidad quieres resolver?',
-            quickReplies: ['Gestion de datos', 'Automatizacion', 'Plataforma de servicios', 'Otro'],
+          'Tengo web, pero no vende': {
+            message: 'Diagnóstico rápido: Tienes un pasivo, no un activo. Una web que no convierte es un vendedor que espanta clientes.\n\n**¿Cuál es el principal motivo por el que crees que tus visitas no se transforman en ventas?**',
+            quickReplies: ['Diseño obsoleto', 'No genera confianza', 'Es muy lenta', 'No tengo idea'],
             score: 20,
-            type: 'app'
+            type: 'audit'
           },
-          'Automatizar procesos': {
-            message: 'La automatización es clave para escalar cualquier negocio. ${CONFIG.developerName} ha ayudado a empresas a reducir hasta un 60% el tiempo en tareas repetitivas.\n\n¿Qué procesos te gustaría automatizar?',
-            quickReplies: ['Facturacion', 'Gestion de clientes', 'Inventarios', 'Otro proceso'],
-            score: 20,
+          'No tengo presencia digital': {
+            message: 'Eso significa que tu negocio es invisible para el 90% de tu mercado. Estás dejando dinero sobre la mesa cada día que pasa.\n\n**¿Qué comercializas y cuál es tu urgencia real de empezar a facturar en digital?**',
+            quickReplies: ['Servicios profesionales', 'Tienda/E-commerce', 'Consultoría/Marca Personal'],
+            score: 25,
+            type: 'new'
+          },
+          'Quiero automatizar ventas': {
+            message: 'Esa es la mentalidad correcta. Si dependes de responder manualmente cada mensaje, tienes un trabajo, no un negocio escalable.\n\n**¿Cuántos leads potenciales pierdes al día por no responder a tiempo?**',
+            quickReplies: ['Menos de 10', 'Más de 30', 'Demasiados para contarlos'],
+            score: 30,
             type: 'automation'
           },
-          'Crear una tienda online': {
-            message: 'Una tienda online bien desarrollada puede aumentar significativamente tus ventas. El comercio electrónico sigue creciendo año tras año.\n\n¿Ya vendes productos físicamente o es un negocio 100% digital?',
-            quickReplies: ['Ya vendo fisicamente', '100% digital', 'Es un proyecto nuevo'],
-            score: 18,
-            type: 'ecommerce'
-          },
-          'Solo estoy mirando': {
-            message: `Entiendo, no hay presión.\n\nSi tienes alguna pregunta sobre desarrollo de software, diseño web o tecnología en general, estoy aquí para ayudarte.\n\nTambién puedes ver algunos proyectos de ${CONFIG.developerName} en el portafolio.`,
-            quickReplies: ['Ver proyectos', 'Tengo una pregunta', 'Gracias, vuelvo luego'],
-            score: 2,
-            type: 'browser'
+          'Solo estoy investigando': {
+            message: 'Investigar está bien, pero la ejecución es lo que paga las facturas. Mientras investigas, tu competencia ya está cerrando ventas.\n\n**¿Te gustaría ver cómo transformamos visitantes en clientes reales?**',
+            quickReplies: ['Sí, muéstrame casos', 'Todavía no es el momento'],
+            score: 5,
+            type: 'cold'
           }
         },
 
         businessStage: {
-          'Negocio existente': {
-            message: 'Perfecto. Trabajar con negocios establecidos tiene grandes ventajas: ya hay datos, procesos y clientes.\n\n¿Cuál es el principal desafío que enfrentas actualmente con tu presencia digital?',
-            quickReplies: ['Sitio desactualizado', 'No aparecemos en Google', 'No generamos ventas', 'Otro desafio'],
-            score: 10
+          'Diseño obsoleto': {
+            message: 'Un diseño anticuado grita "falta de profesionalismo". Eso mata la confianza antes de que leas tu oferta.\n\nEn **DM Webs** no diseñamos por diseñar. Creamos arquitecturas de persuasión.\n\n**¿Quieres que analicemos tu caso y te digamos exactamente dónde estás perdiendo dinero?**',
+            quickReplies: ['Sí, revisen mi caso', 'Hablemos por WhatsApp'],
+            score: 15
           },
-          'Proyecto nuevo': {
-            message: 'Empezar con una base sólida es fundamental. Un proyecto bien desarrollado desde el inicio evita problemas costosos después.\n\n¿Ya tienes definida la idea o necesitas orientación para estructurarla?',
-            quickReplies: ['Idea definida', 'Necesito orientacion', 'Tengo un borrador'],
-            score: 8
+          'No genera confianza': {
+            message: 'En internet, la confianza es la moneda. Sin ella, el precio no importa: no compran.\n\nNosotros implementamos psicología de ventas y pruebas sociales estratégicas para que el cliente sienta que eres la única opción lógica.',
+            quickReplies: ['Agendar diagnóstico', 'Hablar con un asesor'],
+            score: 15
           },
-          'Ambos casos': {
-            message: 'Interesante escenario. ${CONFIG.developerName} tiene experiencia trabajando con empresas en transición.\n\nCuéntame más: ¿qué situación específica quieres resolver?',
-            quickReplies: ['Expandir negocio', 'Modernizar sistemas', 'Nuevo producto/servicio'],
-            score: 12
+          'Servicios profesionales': {
+            message: 'En servicios, tu reputación lo es todo. Tu web debe ser tu mejor vendedor, trabajando 24/7 sin excusas.\n\nSi no está optimizada para captar leads calificados, estás trabajando el doble por la mitad de resultados.\n\n**¿Te interesa un sistema de alta conversión listo en días?**',
+            quickReplies: ['Sí, quiero resultados', 'Ver inversión requerida'],
+            score: 15
           }
         },
 
         problems: {
-          'Sitio desactualizado': {
-            message: 'Un sitio desactualizado puede estar costándote clientes sin que te des cuenta. La primera impresión digital es crucial.\n\n${CONFIG.developerName} puede crear un sitio moderno, rápido y optimizado para convertir visitantes en clientes.',
-            score: 8
+          'Es muy lenta': {
+            message: 'Si tu web tarda más de 3 segundos en cargar, estás quemando dinero. El usuario se va y se lo lleva tu competencia.\n\nEsto es técnicamente solucionable y el impacto en ventas es inmediato.',
+            score: 15
           },
-          'No aparecemos en Google': {
-            message: 'El SEO técnico es fundamental. Un sitio bien desarrollado desde la base tiene más probabilidades de rankear.\n\n${CONFIG.developerName} desarrolla sitios con SEO técnico incluido desde el día uno.',
-            score: 8
+          'Demasiados para contarlos': {
+            message: 'Estás sentado sobre una mina de oro sin excavar. Cada lead perdido es dinero que se va.\n\nNuestra automatización recupera esas ventas automáticamente.',
+            score: 20
           },
-          'No generamos ventas': {
-            message: 'Este es uno de los problemas más comunes. Un sitio sin estrategia de conversión es solo una tarjeta de presentación cara.\n\n${CONFIG.developerName} diseña con psicología de conversión: cada elemento tiene un propósito.',
-            score: 10
-          },
-          'Gestion de datos': {
-            message: 'La gestión de datos eficiente puede ahorrar horas de trabajo semanales. ${CONFIG.developerName} ha desarrollado sistemas que reducen hasta un 70% el tiempo en tareas administrativas.',
-            score: 10
-          },
-          'Automatizacion': {
-            message: 'La automatización inteligente transforma operaciones. Imagina procesos que funcionen 24/7 sin intervención manual.\n\n${CONFIG.developerName} especializa en crear sistemas que trabajan mientras tú descansas.',
-            score: 10
-          },
-          'Idea definida': {
-            message: 'Excelente. Tener claridad acelera enormemente el proceso de desarrollo.\n\nCon la información correcta, ${CONFIG.developerName} puede darte un estimado preciso y empezar a trabajar pronto.',
-            score: 12
-          },
-          'Necesito orientacion': {
-            message: 'No te preocupes, es normal. Muchos clientes exitosos empezaron sin saber exactamente lo que necesitaban.\n\n${CONFIG.developerName} ofrece consultas gratuitas para ayudarte a estructurar tu idea y definir el alcance.',
-            score: 6
+          'Sí, quiero resultados': {
+            message: 'Decisión correcta. Solo aceptamos proyectos donde sabemos que podemos generar un ROI claro. Esta semana nos quedan **2 cupos** para nuevos desarrollos.',
+            score: 25
           }
         },
 
         interestIndicators: [
-          'Cuanto cuesta',
-          'precio',
-          'presupuesto',
-          'tiempo',
-          'plazo',
-          'cuando podria',
-          'necesito',
-          'urgente',
-          'proyecto'
+          'cuanto cuesta', 'precio', 'presupuesto', 'tiempo', 'urgente', 'ahora', 'interesa', 'contacto', 'llamada', 'whatsapp', 'numero', 'inversion', 'cotizacion'
         ],
 
         closing: {
-          threshold: 25,
+          threshold: 30,
           messages: [
-            'Por lo que me comentas, definitivamente es un proyecto interesante. ${CONFIG.developerName} puede ayudarte a desarrollar esa solución.\n\nSi quieres, podemos revisar tu proyecto ahora mismo por WhatsApp y resolver tus dudas en vivo.',
-            'Tienes un proyecto con buen potencial. ${CONFIG.developerName} ha trabajado en casos similares con excelentes resultados.\n\nLa mejor forma de avanzar es conversar directamente. ¿Te gustaría que ${CONFIG.developerName} te contacte por WhatsApp?',
-            'Veo que tienes claridad en lo que necesitas. Eso facilita mucho el proceso de desarrollo.\n\n${CONFIG.developerName} está disponible para discutir los detalles de tu proyecto. ¿Hablamos por WhatsApp?'
+            'Mira, el tiempo es el recurso más valioso. Si tu objetivo es escalar ingresos, necesitas tomar acción.\n\n**Hablemos 5 minutos por WhatsApp y definamos si podemos trabajar juntos.**',
+            'He revisado tu perfil. Tenemos la capacidad de ejecutar esto, pero nuestra disponibilidad es limitada por la calidad que entregamos.\n\n**¿Aseguramos tu cupo ahora?**',
+            'El mercado no espera a que te decidas. Cada día que pasa sin una estrategia digital funcional es dinero perdido.\n\n**¿Avanzamos con una propuesta concreta hoy mismo?**'
           ]
         },
 
         reEngagement: [
-          '¿Sigues ahí? Si tienes alguna pregunta, estoy para ayudarte.',
-          '¿Necesitas más información sobre algún servicio? Puedo ayudarte.',
-          'Si prefieres, también puedes contactar directamente a ${CONFIG.developerName} por WhatsApp.'
+          '¿Sigues ahí? Recuerda que los resultados llegan para los que toman acción, no para los que esperan.',
+          'Otro cliente acaba de reservar su consultoría. ¿Quieres asegurar la tuya antes de que se agote el mes?',
+          'Tu negocio tiene potencial, pero el potencial sin ejecución no sirve. ¿Hablamos por WhatsApp y cerramos el plan?'
         ]
       };
+
 
       // ===== FUNCIONES UTILITARIAS =====
       function randomDelay(min, max) {
@@ -170,7 +142,10 @@
       function escapeHtml(text) {
         const div = document.createElement('div');
         div.textContent = text;
-        return div.innerHTML.replace(/\n/g, '<br>');
+        // Simple Markdown Parser for Bold
+        let html = div.innerHTML;
+        html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        return html.replace(/\n/g, '<br>');
       }
 
       function getCurrentTime() {
@@ -268,14 +243,12 @@
           </div>
           <div class="message-content">
   <a href="https://wa.me/${CONFIG.whatsappNumber}?text=🚀%20Hola%20${CONFIG.developerName}!%0A%0A👋%20Estoy%20interesado%20en%20desarrollar%20un%20*proyecto%20web*.%0A%0A💡%20Me%20gustaria%20saber:%0A•%20Como%20podemos%20empezar%0A•%20Tiempo%20de%20desarrollo%0A•%20Costo%20aproximado%0A%0A📲%20Quedo%20atento%20a%20tu%20respuesta.%20Gracias!" 
-     target="_blank" 
+     target="_blank" rel="noopener"
      class="cta-button">
      
     <svg viewBox="0 0 24 24" fill="currentColor">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-
-    Hablar por WhatsApp
+    </svg>Agendar Estrategia
   </a>
 </div>
         `;
@@ -365,7 +338,7 @@
           // Treat as custom response
           state.leadScore += 5;
           state.conversationStage = 1;
-          addMessage('Entiendo. Cuéntame más sobre lo que necesitas y te ayudo a identificar la mejor solución.', true);
+          addMessage('Entiendo. Para ayudarte correctamente necesito entender tu situación. ¿Tienes actualmente un negocio activo o estás empezando desde cero?', true);
         }
       }
 
@@ -385,7 +358,7 @@
 
         if (!matched) {
           state.conversationStage = 2;
-          addMessage('Interesante. ¿Qué problema específico quieres solucionar con este proyecto?', true);
+          addMessage('De acuerdo. Para darte una solución real, dime: ¿Cuál es el obstáculo principal que te impide facturar más hoy?', true);
         }
       }
 
@@ -406,13 +379,13 @@
         if (!matched) {
           state.leadScore += 8;
           state.conversationStage = 3;
-          addMessage('Gracias por compartir eso. ${CONFIG.developerName} ha trabajado en casos similares y puede ofrecerte una solución personalizada.\n\n¿Te gustaría saber más sobre el proceso de trabajo?', true, ['Si, cuentame', 'Prefiero hablar directo']);
+          addMessage('Entendido. ${CONFIG.developerName} ha resuelto problemas similares antes. La clave está en tener un sistema, no solo una web.\n\n**¿Te gustaría conocer nuestro proceso de trabajo?**', true, ['Sí, explícame el proceso', 'Ir directo al grano']);
         }
       }
 
       function handleProblemResponse(text) {
-        if (text.toLowerCase().includes('si') || text.toLowerCase().includes('claro')) {
-          addMessage('El proceso es simple:\n\n1. Agendamos una llamada gratuita para entender tu proyecto\n2. Recibes una propuesta detallada con precios y tiempos\n3. Si aceptas, comenzamos el desarrollo\n4. Recibes actualizaciones constantes hasta la entrega\n\nTodo claro y sin sorpresas.', true);
+        if (text.toLowerCase().includes('si') || text.toLowerCase().includes('claro') || text.toLowerCase().includes('proceso')) {
+          addMessage('Nuestro proceso es directo:\n\n1. **Diagnóstico**: Identificamos fugas de ventas.\n2. **Propuesta**: Diseño estratégico con precio y tiempo.\n3. **Ejecución**: Desarrollo y lanzamiento.\n4. **Resultados**: Medimos el impacto en tu facturación.\n\nSin relleno. Solo enfoque en ROI.', true);
         } else {
           handleGeneralResponse(text);
         }
@@ -422,7 +395,7 @@
         state.leadScore += 5;
         
         if (state.leadScore < RESPONSES.closing.threshold) {
-          addMessage('Entiendo. ¿Hay algo específico sobre el desarrollo de tu proyecto que te gustaría saber?', true);
+          addMessage('Comprendido. ¿Hay algo específico que te detiene para dar el salto a ventas digitales?', true);
         }
       }
 

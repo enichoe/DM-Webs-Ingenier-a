@@ -1,281 +1,193 @@
 
-    // Initialize variables first
-    const cursor = document.getElementById('cursor');
-    const cursorTrail = document.getElementById('cursor-trail');
-    const loader = document.getElementById('loader');
-    const nav = document.getElementById('nav');
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const canvas = document.getElementById('particles-canvas');
-    const ctx = canvas.getContext('2d');
-    
-    let mouseX = 0;
-    let mouseY = 0;
-    let cursorX = 0;
-    let cursorY = 0;
-    let trailX = 0;
-    let trailY = 0;
-    let particles = [];
-    
-    // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    /* 
+       AGENCIA ELITE ENGINE - DM WEBS
+       INTERACTIVITY & ANIMATION 
+    */
+    (function() {
+      'use strict';
 
-    // Loader
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        loader.classList.add('hidden');
-        animateHeroElements();
-      }, 2000);
-    });
+      // 1. ELITE CURSOR SYSTEM
+      const cursor = document.getElementById('cursor');
+      const trail = document.getElementById('cursor-trail');
+      let isMoving = false;
 
-    // Custom Cursor
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    });
+      document.addEventListener('mousemove', (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        
+        cursor.style.transform = `translate(${x}px, ${y}px)`;
+        trail.style.transform = `translate(${x}px, ${y}px)`;
+        
+        isMoving = true;
+      });
 
-    function animateCursor() {
-      cursorX += (mouseX - cursorX) * 0.15;
-      cursorY += (mouseY - cursorY) * 0.15;
-      trailX += (mouseX - trailX) * 0.08;
-      trailY += (mouseY - trailY) * 0.08;
-      
-      if (cursor) {
-        cursor.style.left = cursorX + 'px';
-        cursor.style.top = cursorY + 'px';
+      // Hover Effect for Cursor
+      const eliteLinks = document.querySelectorAll('a, button, .pain-card, .result-card');
+      eliteLinks.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+          trail.style.width = '60px';
+          trail.style.height = '60px';
+          trail.style.background = 'rgba(0, 168, 232, 0.1)';
+          trail.style.border = 'none';
+          cursor.style.transform = `translate(-50%, -50%) scale(1.5)`;
+        });
+        link.addEventListener('mouseleave', () => {
+          trail.style.width = '40px';
+          trail.style.height = '40px';
+          trail.style.background = 'transparent';
+          trail.style.border = '1px solid rgba(255,255,255,0.2)';
+          cursor.style.transform = `translate(-50%, -50%) scale(1)`;
+        });
+      });
+
+      // 2. PARALLAX HERO (WOW EFFECT)
+      const heroMockup = document.querySelector('.hero-mockup');
+      if (heroMockup) {
+        document.addEventListener('mousemove', (e) => {
+          const x = (window.innerWidth / 2 - e.pageX) / 45;
+          const y = (window.innerHeight / 2 - e.pageY) / 45;
+          heroMockup.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${y}deg)`;
+        });
       }
-      if (cursorTrail) {
-        cursorTrail.style.left = trailX + 'px';
-        cursorTrail.style.top = trailY + 'px';
-      }
-      
-      requestAnimationFrame(animateCursor);
-    }
-    
-    if (!prefersReducedMotion) {
-      animateCursor();
-    }
 
-    // Cursor hover effect
-    const hoverElements = document.querySelectorAll('a, button, .skill-card, .project-card');
-    hoverElements.forEach(el => {
-      el.addEventListener('mouseenter', () => cursor && cursor.classList.add('hovering'));
-      el.addEventListener('mouseleave', () => cursor && cursor.classList.remove('hovering'));
-    });
+      // 3. NAV SCROLL LOGIC
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 80) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      });
 
-    // Navigation scroll effect
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
+      // 4. MOBILE MENU SYNC
+      const mobileToggle = document.getElementById('mobile-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileClose = document.getElementById('mobile-close');
+      const mobileLinks = document.querySelectorAll('.mobile-menu-links a');
 
-    // Mobile menu
-    mobileToggle.addEventListener('click', () => {
-      mobileToggle.classList.toggle('active');
-      mobileMenu.classList.toggle('active');
-    });
-
-    // Close mobile menu on link click
-    document.querySelectorAll('.mobile-menu-links a').forEach(link => {
-      link.addEventListener('click', () => {
+      function closeMobileMenu() {
         mobileToggle.classList.remove('active');
         mobileMenu.classList.remove('active');
-      });
-    });
+        document.body.classList.remove('no-scroll');
+      }
 
-    // Hero animations
-    function animateHeroElements() {
-      const elements = document.querySelectorAll('.hero-badge, .hero-title, .hero-subtitle, .hero-tagline, .hero-buttons, .hero-stats');
-      elements.forEach((el, i) => {
-        setTimeout(() => {
-          el.style.opacity = '1';
-          el.style.transform = 'translateY(0)';
-          el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
-        }, i * 150);
-      });
-      
-      // Animate counters
-      setTimeout(() => animateCounters(), 800);
-    }
-
-    // Counter animation
-    function animateCounters() {
-      const counters = document.querySelectorAll('.stat-number');
-      counters.forEach(counter => {
-        const target = parseInt(counter.getAttribute('data-count'));
-        const duration = 2000;
-        const increment = target / (duration / 16);
-        let current = 0;
-        
-        const updateCounter = () => {
-          current += increment;
-          if (current < target) {
-            counter.textContent = Math.floor(current) + '+';
-            requestAnimationFrame(updateCounter);
-          } else {
-            counter.textContent = target + '+';
-          }
-        };
-        
-        if (!prefersReducedMotion) {
-          updateCounter();
+      mobileToggle.addEventListener('click', () => {
+        const isActive = mobileToggle.classList.contains('active');
+        if (isActive) {
+          closeMobileMenu();
         } else {
-          counter.textContent = target + '+';
+          mobileToggle.classList.add('active');
+          mobileMenu.classList.add('active');
+          document.body.classList.add('no-scroll');
         }
       });
-    }
 
-    // Scroll reveal
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    // Particles Canvas
-    function initParticles() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      particles = [];
-      
-      const particleCount = Math.min(80, Math.floor(window.innerWidth / 20));
-      
-      for (let i = 0; i < particleCount; i++) {
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-          radius: Math.random() * 2 + 1
-        });
+      if (mobileClose) {
+        mobileClose.addEventListener('click', closeMobileMenu);
       }
-    }
 
-    function drawParticles() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      particles.forEach((p, i) => {
-        // Update position
-        p.x += p.vx;
-        p.y += p.vy;
-        
-        // Wrap around
-        if (p.x < 0) p.x = canvas.width;
-        if (p.x > canvas.width) p.x = 0;
-        if (p.y < 0) p.y = canvas.height;
-        if (p.y > canvas.height) p.y = 0;
-        
-        // Draw particle
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, Math.max(0.5, p.radius), 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(0, 255, 136, 0.6)';
-        ctx.fill();
-        
-        // Draw connections
-        particles.forEach((p2, j) => {
-          if (i !== j) {
-            const dx = p.x - p2.x;
-            const dy = p.y - p2.y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            
-            if (dist < 150) {
-              ctx.beginPath();
-              ctx.moveTo(p.x, p.y);
-              ctx.lineTo(p2.x, p2.y);
-              const alpha = Math.max(0, (1 - dist / 150) * 0.2);
-              ctx.strokeStyle = `rgba(0, 255, 136, ${alpha})`;
-              ctx.stroke();
-            }
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+
+
+      // 5. OBSERVER REVEAL SYSTEM
+      const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -80px 0px' };
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            revealObserver.unobserve(entry.target); // Performance: stop watching once revealed
           }
         });
-      });
+      }, observerOptions);
+
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      // 7. PREMIUN LIKE SYSTEM
+      const likeButtons = document.querySelectorAll('.like-btn');
       
-      if (!prefersReducedMotion) {
-        requestAnimationFrame(drawParticles);
+      // Seed initial data if not exists (for demo impact)
+      const projectSeeds = {
+        'pideclick': 142,
+        'tactica': 98,
+        'taller': 64,
+        'veterinaria': 87,
+        'vargas': 52,
+        'nails': 41,
+        'notaria': 33,
+        'policlinico': 56,
+        'menuclick': 124,
+        'storeclick': 110,
+        'ayem': 29
+      };
+
+      function initLikes() {
+        likeButtons.forEach(btn => {
+          const projectId = btn.dataset.project;
+          let likes = localStorage.getItem(`likes_${projectId}`);
+          let hasLiked = localStorage.getItem(`hasLiked_${projectId}`) === 'true';
+          
+          if (!likes) {
+            likes = projectSeeds[projectId] || 0;
+            localStorage.setItem(`likes_${projectId}`, likes);
+          }
+          
+          btn.querySelector('.like-count').textContent = likes;
+          if (hasLiked) btn.classList.add('liked');
+          
+          btn.onclick = (e) => {
+            e.preventDefault();
+            toggleLike(btn, projectId);
+          };
+        });
       }
-    }
 
-    // Initialize particles
-    initParticles();
-    if (!prefersReducedMotion) {
-      drawParticles();
-    }
-
-    // Resize handler
-    window.addEventListener('resize', () => {
-      initParticles();
-    });
-
-    // Form submission
-    document.querySelector('.contact-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = e.target.querySelector('.form-submit');
-      btn.textContent = 'Enviando...';
-      
-      setTimeout(() => {
-        btn.textContent = 'Mensaje enviado';
-        btn.style.background = '#00d4ff';
+      function toggleLike(btn, id) {
+        let likes = parseInt(localStorage.getItem(`likes_${id}`));
+        let hasLiked = localStorage.getItem(`hasLiked_${id}`) === 'true';
         
-        setTimeout(() => {
-          btn.textContent = 'Enviar mensaje';
-          btn.style.background = '';
-          e.target.reset();
-        }, 2000);
-      }, 1500);
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (hasLiked) {
+          likes--;
+          localStorage.setItem(`hasLiked_${id}`, 'false');
+          btn.classList.remove('liked');
+        } else {
+          likes++;
+          localStorage.setItem(`hasLiked_${id}`, 'true');
+          btn.classList.add('liked');
+          // Simple shockwave effect
+          createLikeParticle(btn);
         }
-      });
-    });
+        
+        localStorage.setItem(`likes_${id}`, likes);
+        btn.querySelector('.like-count').textContent = likes;
+      }
 
+      function createLikeParticle(btn) {
+        const particle = document.createElement('span');
+        particle.textContent = '❤️';
+        particle.style.position = 'absolute';
+        particle.style.left = '50%';
+        particle.style.top = '0';
+        particle.style.transform = 'translate(-50%, 0)';
+        particle.style.pointerEvents = 'none';
+        particle.style.animation = 'floatUp 1s ease-out forwards';
+        btn.style.position = 'relative';
+        btn.appendChild(particle);
+        setTimeout(() => particle.remove(), 1000);
+      }
 
-document.getElementById("contactForm").addEventListener("submit", function(e){
+      // Add particle animation to CSS via JS
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes floatUp {
+          0% { opacity: 1; transform: translate(-50%, 0) scale(1); }
+          100% { opacity: 0; transform: translate(-50%, -40px) scale(1.5); }
+        }
+      `;
+      document.head.appendChild(style);
 
-e.preventDefault();
+      initLikes();
 
-const name = document.getElementById("name").value;
-const email = document.getElementById("email").value;
-const phone = document.getElementById("phone").value;
-const message = document.getElementById("message").value;
-
-const page = window.location.href;
-const time = new Date().toLocaleString();
-const device = /Mobi|Android/i.test(navigator.userAgent) ? "📱 Móvil" : "💻 Computadora";
-
-const text = `🚀 *Nuevo contacto desde tu portafolio*
-
-👤 *Nombre:* ${name}
-📧 *Email:* ${email}
-📱 Teléfono: ${phone}
-
-💬 *Mensaje:*
-${message}
-
-━━━━━━━━━━━━━━━
-🌐 *Página:* ${page}
-🕒 *Hora:* ${time}
-${device}
-
-📲 *Contacto generado automáticamente*`;
-
-const url = "https://wa.me/51972498691?text=" + encodeURIComponent(text);
-
-window.open(url, "_blank");
-
-});
-
+    })();
