@@ -1,463 +1,877 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO ELITE AGENCY -->
     <title>Portafolio | DM Webs | Ingeniería Web</title>
-    <meta name="description" content="Explora nuestro portafolio de sistemas web, SaaS y e-commerce diseñados para maximizar conversiones y automatizar negocios.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta
+      name="description"
+      content="Explora nuestro portafolio de sistemas web, SaaS y e-commerce diseñados para maximizar conversiones y automatizar negocios."
+    />
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
     <style>
-        .portfolio-header {
-            padding: 12rem 5% 4rem;
-            text-align: center;
-        }
+      .portfolio-header {
+        padding: 12rem 5% 4rem;
+        text-align: center;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Advanced Cursor Layer -->
     <div class="cursor" id="cursor"></div>
     <div class="cursor-trail" id="cursor-trail"></div>
 
     <!-- Background Wow Layer -->
     <div class="bg-mesh">
-        <div class="mesh-orb mesh-1"></div>
-        <div class="mesh-orb mesh-2"></div>
+      <div class="mesh-orb mesh-1"></div>
+      <div class="mesh-orb mesh-2"></div>
     </div>
 
     <!-- ULTIMATE NAVIGATION -->
     <nav class="nav" id="nav">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <svg viewBox="0 0 200 40" class="logo-svg">
-                    <defs>
-                        <linearGradient id="logoGradElite" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#00A8E8;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <path d="M10 5 L5 20 L10 35" fill="none" stroke="url(#logoGradElite)" stroke-width="3" stroke-linecap="round"/>
-                    <path d="M60 5 L65 20 L60 35" fill="none" stroke="url(#logoGradElite)" stroke-width="3" stroke-linecap="round"/>
-                    <text x="35" y="28" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="24" fill="white">DM</text>
-                    <text x="80" y="28" font-family="Plus Jakarta Sans, sans-serif" font-weight="400" font-size="20" fill="#888888">Webs</text>
-                </svg>
-            </a>
-            
-            <ul class="nav-links">
-                <li><a href="index.html#soluciones">Soluciones</a></li>
-                <li><a href="portafolio.html" class="active">Portafolio</a></li>
-                <li><a href="index.html#stats">Ciencia</a></li>
-                <li><a href="index.html#faq">Dudas</a></li>
-            </ul>
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <svg viewBox="0 0 200 40" class="logo-svg">
+            <defs>
+              <linearGradient
+                id="logoGradElite"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+              >
+                <stop
+                  offset="0%"
+                  style="stop-color: #ffffff; stop-opacity: 1"
+                />
+                <stop
+                  offset="100%"
+                  style="stop-color: #00a8e8; stop-opacity: 1"
+                />
+              </linearGradient>
+            </defs>
+            <path
+              d="M10 5 L5 20 L10 35"
+              fill="none"
+              stroke="url(#logoGradElite)"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+            <path
+              d="M60 5 L65 20 L60 35"
+              fill="none"
+              stroke="url(#logoGradElite)"
+              stroke-width="3"
+              stroke-linecap="round"
+            />
+            <text
+              x="35"
+              y="28"
+              text-anchor="middle"
+              font-family="Plus Jakarta Sans, sans-serif"
+              font-weight="800"
+              font-size="24"
+              fill="white"
+            >
+              DM
+            </text>
+            <text
+              x="80"
+              y="28"
+              font-family="Plus Jakarta Sans, sans-serif"
+              font-weight="400"
+              font-size="20"
+              fill="#888888"
+            >
+              Webs
+            </text>
+          </svg>
+        </a>
 
-            <a href="https://wa.me/972498691?text=🚀%20Hola,%20quiero%20un%20sistema%20web%20que%20genere%20clientes" class="nav-cta" target="_blank" rel="noopener">🚀 Iniciar Proyecto</a>
-            
-            <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
+        <ul class="nav-links">
+          <li><a href="index.html#soluciones">Soluciones</a></li>
+          <li><a href="portafolio.html" class="active">Portafolio</a></li>
+          <li><a href="index.html#stats">Ciencia</a></li>
+          <li><a href="index.html#faq">Dudas</a></li>
+        </ul>
+
+        <a
+          href="https://wa.me/972498691?text=🚀%20Hola,%20quiero%20un%20sistema%20web%20que%20genere%20clientes"
+          class="nav-cta"
+          target="_blank"
+          rel="noopener"
+          >🚀 Iniciar Proyecto</a
+        >
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
 
     <!-- ELITE MOBILE MENU -->
     <div class="mobile-menu" id="mobile-menu">
-        <button class="mobile-close" id="mobile-close" aria-label="Cerrar Menú">&times;</button>
-        <ul class="mobile-menu-links">
-            <li><a href="index.html#soluciones">Soluciones</a></li>
-            <li><a href="portafolio.html">Portafolio</a></li>
-            <li><a href="index.html#stats">La Ciencia</a></li>
-            <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
-        </ul>
+      <button class="mobile-close" id="mobile-close" aria-label="Cerrar Menú">
+        &times;
+      </button>
+      <ul class="mobile-menu-links">
+        <li><a href="index.html#soluciones">Soluciones</a></li>
+        <li><a href="portafolio.html">Portafolio</a></li>
+        <li><a href="index.html#stats">La Ciencia</a></li>
+        <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
+      </ul>
     </div>
 
     <main>
-        <header class="portfolio-header">
+      <header class="portfolio-header">
+        <div class="section-label reveal">Ingeniería Aplicada</div>
 
-    <div class="section-label reveal">Ingeniería Aplicada</div>
+        <h1 class="section-title reveal">
+          Sistemas web que <span class="accent">generan resultados reales</span>
+        </h1>
 
-    <h1 class="section-title reveal">
-        Sistemas web que <span class="accent">generan resultados reales</span>
-    </h1>
+        <p class="hero-tagline reveal" style="max-width: 800px; margin: 0 auto">
+          Cada proyecto es desarrollado como un sistema de conversión:
+          optimizado para atraer, convencer y convertir usuarios en clientes.
+          Aquí no mostramos diseños… mostramos plataformas construidas para
+          generar crecimiento y ventas.
+        </p>
+      </header>
 
-    <p class="hero-tagline reveal" style="max-width: 800px; margin: 0 auto;">
-        Cada proyecto es desarrollado como un sistema de conversión: optimizado para atraer, convencer y convertir usuarios en clientes. 
-        Aquí no mostramos diseños… mostramos plataformas construidas para generar crecimiento y ventas.
-    </p>
-
-</header>
-
-        <section class="results-section" style="padding-top: 0;">
-            <div class="section-inner">
-                <div class="results-grid">
-                    <!-- Project 1 -->
-                    <div class="result-card reveal">
-                        <div class="result-visual">
-                            <img src="pideClick.png" alt="PideClick" class="result-img-full">
-                        </div>
-                        <div class="result-info">
-                            <span class="result-badge">Sistema SaaS</span>
-                            <h3>PideClick</h3>
-                            <p>
-                                PideClick es una plataforma SaaS diseñada para la optimización integral de restaurantes, permitiéndoles digitalizar y automatizar la gestión de pedidos en tiempo real. Facilita una experiencia de compra rápida, intuitiva y sin fricciones para los clientes, mientras incrementa las conversiones, reduce errores operativos y mejora la eficiencia del negocio. Ideal para restaurantes que buscan escalar sus ventas mediante tecnología moderna y procesos inteligentes.
-                            </p>
-                            <div class="result-footer">
-                                <a href="https://pide-click.vercel.app/" class="result-link" target="_blank">
-                                    Ver cómo funciona ↗
-                                </a>
-                                <button class="like-btn" data-project="pideclick">
-                                    <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    <span class="like-count">0</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 2 -->
-                    <div class="result-card reveal">
-                        <div class="result-visual">
-                            <img src="dz.png" alt="Ecommerce" class="result-img-full">
-                        </div>
-                        <div class="result-info">
-                            <span class="result-badge">E-Commerce</span>
-                            <h3>Tienda Táctica</h3>
-                            <p>
-                                Tienda virtual diseñada estratégicamente para maximizar el ticket promedio y potenciar las ventas online. Ofrece una experiencia de compra optimizada para dispositivos móviles, con navegación intuitiva, carga rápida y procesos de pago simplificados. Ideal para negocios que buscan aumentar conversiones, fidelizar clientes y escalar sus ingresos mediante una plataforma moderna y eficiente.
-                            </p>
-                            <div class="result-footer">
-                                <a href="https://dz-shielding-tactical.vercel.app/" class="result-link" target="_blank">
-                                    Ver resultados ↗
-                                </a>
-                                <button class="like-btn" data-project="tactica">
-                                    <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    <span class="like-count">0</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3 -->
-                    <div class="result-card reveal">
-                        <div class="result-visual">
-                            <img src="car.webp" alt="Inmobiliaria" class="result-img-full">
-                        </div>
-                        <div class="result-info">
-                            <span class="result-badge">Captación de Leads</span>
-                            <h3>Taller Mecánico</h3> 
-                            <p>
-                                Plataforma digital diseñada para talleres mecánicos que buscan captar más clientes y optimizar la gestión de servicios. Permite a los usuarios agendar citas en línea de forma rápida y sencilla, consultar servicios disponibles y recibir atención eficiente. Incluye funcionalidades orientadas a mejorar la organización del taller, reducir tiempos de espera y aumentar la satisfacción del cliente mediante una experiencia moderna y confiable.
-                            </p>
-                            <div class="result-footer">
-                                <a href="https://tallercar.vercel.app/" class="result-link" target="_blank" >
-                                    Ver concepto ↗
-                                </a>
-                                <button class="like-btn" data-project="taller">
-                                    <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    <span class="like-count">0</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 4 -->
-                    <div class="result-card reveal">
-                        <div class="result-visual">
-                            <img src="veterinaria.webp" alt="Sistema Web" class="result-img-full">
-                        </div>
-                        <div class="result-info">
-                            <span class="result-badge">Landing Page</span>
-                            <h3>Gestión de Veterinaria</h3>
-                            <p>
-                                Sistema web especializado para clínicas veterinarias, diseñado para optimizar la gestión de citas, historiales médicos de mascotas y atención al cliente en tiempo real. Permite agendar consultas fácilmente, llevar un control detallado de tratamientos y mejorar la comunicación con los dueños, brindando una experiencia más organizada, eficiente y confiable para el cuidado de cada mascota.
-                            </p>
-                            <div class="result-footer">
-                                <a href="https://veterinariaperu.vercel.app/" class="result-link" target="_blank">
-                                    Ver demo ↗
-                                </a>
-                                <button class="like-btn" data-project="veterinaria">
-                                    <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    <span class="like-count">0</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 5 -->
-                    <div class="result-card reveal">
-                        <div class="result-visual">
-                            <img src="iPhone-13-PRO-rodrigovargas.vercel.app.webp" alt="Sistema Web" class="result-img-full">
-                        </div>
-                        <div class="result-info">
-                            <span class="result-badge">Landing Page</span>
-                            <h3>Bartender Profesional</h3>
-                            <p>
-                                Sitio web diseñado para bartenders profesionales que buscan destacar sus servicios y captar clientes para eventos exclusivos. Permite mostrar menús de coctelería, paquetes personalizados y experiencias únicas, además de facilitar la reserva de fechas en línea. Optimizado para generar impacto visual, transmitir confianza y convertir visitas en contrataciones para eventos sociales y corporativos.
-                            </p>
-                            <div class="result-footer">
-                                <a href="https://rodrigovargas.vercel.app/" class="result-link" target="_blank">
-                                    Ver demo ↗
-                                </a>
-                                <button class="like-btn" data-project="vargas">
-                                    <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    <span class="like-count">0</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 6 -->
-                    <div class="result-card reveal">
-                        <div class="result-visual">
-                            <img src="unas.png" alt="Sistema Web" class="result-img-full">
-                        </div>
-                        <div class="result-info">
-                            <span class="result-badge">Landing Page</span>
-<h3>Salón de Manicure & Pedicure</h3>
-<p>
-    Landing page diseñada para salones profesionales de manicure y pedicure que buscan atraer más clientas y destacar sus servicios. Permite mostrar catálogos de diseños, promociones y paquetes de belleza, además de facilitar la reserva de citas en línea de forma rápida y sencilla. Optimizada para transmitir elegancia, confianza y brindar una experiencia visual atractiva que convierta visitas en reservas.
-</p>
-                            <div class="result-footer">
-                                <a href="https://elaynenails.netlify.app/" class="result-link" target="_blank">
-                                    Ver demo ↗
-                                </a>
-                                <button class="like-btn" data-project="nails">
-                                    <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    <span class="like-count">0</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 7 -->
-                    <div class="result-card reveal">
-                        <div class="result-visual">
-                            <img src="Noataria.png" alt="Sistema Web" class="result-img-full">
-                        </div>
-                        <div class="result-info">
-                            <span class="result-badge">Landing Page</span>
-<h3>Notaría</h3>
-<p>
-    Landing page diseñada para notarías que buscan proyectar confianza, profesionalismo y captar nuevos clientes. Permite mostrar servicios notariales, requisitos, costos referenciales y facilitar la solicitud de citas en línea de manera rápida y segura. Optimizada para brindar claridad en la información, mejorar la atención al cliente y convertir visitas en trámites efectivos.
-</p>
-                            <div class="result-footer">
-                                <a href="https://notaria-lamolina.netlify.app/" class="result-link" target="_blank">
-                                    Ver demo ↗
-                                </a>
-                                <button class="like-btn" data-project="notaria">
-                                    <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    <span class="like-count">0</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 8 -->
-                    <div class="result-card reveal">
-                        <div class="result-visual">
-                            <img src="policlinico.png" alt="Sistema Web" class="result-img-full">
-                        </div>
-                        <div class="result-info">
-                            <span class="result-badge">Landing Page</span>
-<h3>Policlínico</h3>
-<p>
-    Landing page diseñada para policlínicos que buscan brindar información clara sobre sus especialidades médicas y captar nuevos pacientes. Permite mostrar servicios de salud, staff médico, horarios de atención y facilitar la reserva de citas en línea de manera rápida y segura. Optimizada para transmitir confianza, profesionalismo y mejorar la experiencia del paciente desde el primer contacto.
-</p>
-                            <div class="result-footer">
-                                <a href="https://policlinico-sanmartin.netlify.app/" class="result-link" target="_blank">
-                                    Ver demo ↗
-                                </a>
-                                <button class="like-btn" data-project="policlinico">
-                                    <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    <span class="like-count">0</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 9 -->
-                    <div class="result-card reveal">
-                        <div class="result-visual">
-                            <img src="menu.webp" alt="Sistema Web" class="result-img-full">
-                        </div>
-                        <div class="result-info">
-                            <span class="result-badge">Sistema SaaS</span>
-<h3>MenuClick</h3>
-<p>
-    Plataforma SaaS diseñada para restaurantes que desean digitalizar su carta de menú y mejorar la experiencia del cliente mediante códigos QR. Permite visualizar menús en tiempo real desde cualquier dispositivo, actualizar productos fácilmente y reducir el uso de cartas físicas. Optimizada para agilizar pedidos, mejorar la presentación del negocio y ofrecer una experiencia moderna, rápida y sin contacto.
-</p>
-                            <div class="result-footer">
-                                <a href="https://menu-click.vercel.app/" class="result-link" target="_blank">
-                                    Ver demo ↗
-                                </a>
-                                <button class="like-btn" data-project="menuclick">
-                                    <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    <span class="like-count">0</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Project 10 -->
-                    <div class="result-card reveal">
-                        <div class="result-visual">
-                            <img src="store.webp" alt="Sistema Web" class="result-img-full">
-                        </div>
-                        <div class="result-info">
-                            <span class="result-badge">Sistema SaaS</span>
-<h3>StoreClick</h3>
-<p>
-    Plataforma SaaS diseñada para crear y gestionar tiendas virtuales de forma rápida y profesional, sin necesidad de conocimientos técnicos. Permite administrar productos, pedidos y clientes desde un solo lugar, con interfaces optimizadas para maximizar conversiones y ventas. Incluye herramientas para personalización, pagos en línea y una experiencia de compra fluida, ideal para emprendedores y negocios que buscan escalar en el mundo digital.
-</p>
-                            <div class="result-footer">
-                                <a href="https://click-store-weld.vercel.app/" class="result-link" target="_blank">
-                                    Ver demo ↗
-                                </a>
-                                <button class="like-btn" data-project="storeclick">
-                                    <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    <span class="like-count">0</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 11 -->
-                    <div class="result-card reveal">
-                        <div class="result-visual">
-                            <img src="app1.webp" alt="Sistema Web" class="result-img-full">
-                        </div>
-                        <div class="result-info">
-                            <span class="result-badge">Landing Page</span>
-<h3>A&EM INSTALACIONES DE GAS NATURAL</h3>
-<p>
-    Landing page diseñada para empresas instaladoras de gas natural que buscan generar confianza y captar nuevos clientes. Permite mostrar servicios de instalación, mantenimiento y certificación, así como detallar procesos, beneficios y normativas de seguridad. Optimizada para transmitir profesionalismo, garantizar tranquilidad al cliente y facilitar el contacto o solicitud de cotizaciones de manera rápida y efectiva.
-</p>
-                            <div class="result-footer">
-                                <a href="https://ayem-bonogas.netlify.app/" class="result-link" target="_blank">
-                                    Ver demo ↗
-                                </a>
-                                <button class="like-btn" data-project="ayem">
-                                    <svg class="heart-icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
-                                    <span class="like-count">0</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
+      <section class="results-section" style="padding-top: 0">
+        <div class="section-inner">
+          <div class="results-grid">
+            <!-- Project 1 -->
+            <div class="result-card reveal">
+              <div class="result-visual">
+                <img
+                  src="pideClick.png"
+                  alt="PideClick"
+                  class="result-img-full"
+                />
+              </div>
+              <div class="result-info">
+                <span class="result-badge">Sistema SaaS</span>
+                <h3>PideClick</h3>
+                <p>
+                  PideClick es una plataforma SaaS diseñada para la optimización
+                  integral de restaurantes, permitiéndoles digitalizar y
+                  automatizar la gestión de pedidos en tiempo real. Facilita una
+                  experiencia de compra rápida, intuitiva y sin fricciones para
+                  los clientes, mientras incrementa las conversiones, reduce
+                  errores operativos y mejora la eficiencia del negocio. Ideal
+                  para restaurantes que buscan escalar sus ventas mediante
+                  tecnología moderna y procesos inteligentes.
+                </p>
+                <div class="result-footer">
+                  <a
+                    href="https://pide-click.vercel.app/"
+                    class="result-link"
+                    target="_blank"
+                  >
+                    Ver cómo funciona ↗
+                  </a>
+                  <button class="like-btn" data-project="pideclick">
+                    <svg class="heart-icon" viewBox="0 0 24 24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      ></path>
+                    </svg>
+                    <span class="like-count">0</span>
+                  </button>
                 </div>
+              </div>
             </div>
-        </section>
 
-        <!-- CTA SECTION IN PORTFOLIO (INGENIERÍA DE ACTIVACIÓN) -->
-<section class="offer-section">
-    <div class="section-inner">
+            <!-- Project 2 -->
+            <div class="result-card reveal">
+              <div class="result-visual">
+                <img src="dz.png" alt="Ecommerce" class="result-img-full" />
+              </div>
+              <div class="result-info">
+                <span class="result-badge">E-Commerce</span>
+                <h3>Tienda Táctica</h3>
+                <p>
+                  Tienda virtual diseñada estratégicamente para maximizar el
+                  ticket promedio y potenciar las ventas online. Ofrece una
+                  experiencia de compra optimizada para dispositivos móviles,
+                  con navegación intuitiva, carga rápida y procesos de pago
+                  simplificados. Ideal para negocios que buscan aumentar
+                  conversiones, fidelizar clientes y escalar sus ingresos
+                  mediante una plataforma moderna y eficiente.
+                </p>
+                <div class="result-footer">
+                  <a
+                    href="https://dz-shielding-tactical.vercel.app/"
+                    class="result-link"
+                    target="_blank"
+                  >
+                    Ver resultados ↗
+                  </a>
+                  <button class="like-btn" data-project="tactica">
+                    <svg class="heart-icon" viewBox="0 0 24 24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      ></path>
+                    </svg>
+                    <span class="like-count">0</span>
+                  </button>
+                </div>
+              </div>
+            </div>
 
-        <div class="offer-card reveal">
+            <!-- Project 3 -->
+            <div class="result-card reveal">
+              <div class="result-visual">
+                <img
+                  src="car.webp"
+                  alt="Inmobiliaria"
+                  class="result-img-full"
+                />
+              </div>
+              <div class="result-info">
+                <span class="result-badge">Captación de Leads</span>
+                <h3>Taller Mecánico</h3>
+                <p>
+                  Plataforma digital diseñada para talleres mecánicos que buscan
+                  captar más clientes y optimizar la gestión de servicios.
+                  Permite a los usuarios agendar citas en línea de forma rápida
+                  y sencilla, consultar servicios disponibles y recibir atención
+                  eficiente. Incluye funcionalidades orientadas a mejorar la
+                  organización del taller, reducir tiempos de espera y aumentar
+                  la satisfacción del cliente mediante una experiencia moderna y
+                  confiable.
+                </p>
+                <div class="result-footer">
+                  <a
+                    href="https://tallercar.vercel.app/"
+                    class="result-link"
+                    target="_blank"
+                  >
+                    Ver concepto ↗
+                  </a>
+                  <button class="like-btn" data-project="taller">
+                    <svg class="heart-icon" viewBox="0 0 24 24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      ></path>
+                    </svg>
+                    <span class="like-count">0</span>
+                  </button>
+                </div>
+              </div>
+            </div>
 
+            <!-- Project 4 -->
+            <div class="result-card reveal">
+              <div class="result-visual">
+                <img
+                  src="veterinaria.webp"
+                  alt="Sistema Web"
+                  class="result-img-full"
+                />
+              </div>
+              <div class="result-info">
+                <span class="result-badge">Landing Page</span>
+                <h3>Gestión de Veterinaria</h3>
+                <p>
+                  Sistema web especializado para clínicas veterinarias, diseñado
+                  para optimizar la gestión de citas, historiales médicos de
+                  mascotas y atención al cliente en tiempo real. Permite agendar
+                  consultas fácilmente, llevar un control detallado de
+                  tratamientos y mejorar la comunicación con los dueños,
+                  brindando una experiencia más organizada, eficiente y
+                  confiable para el cuidado de cada mascota.
+                </p>
+                <div class="result-footer">
+                  <a
+                    href="https://veterinariaperu.vercel.app/"
+                    class="result-link"
+                    target="_blank"
+                  >
+                    Ver demo ↗
+                  </a>
+                  <button class="like-btn" data-project="veterinaria">
+                    <svg class="heart-icon" viewBox="0 0 24 24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      ></path>
+                    </svg>
+                    <span class="like-count">0</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="result-card reveal">
+              <div class="result-visual">
+                <img
+                  src="iPhone-13-PRO-rodrigovargas.vercel.app.webp"
+                  alt="Sistema Web"
+                  class="result-img-full"
+                />
+              </div>
+              <div class="result-info">
+                <span class="result-badge">Landing Page</span>
+                <h3>Bartender Profesional</h3>
+                <p>
+                  Sitio web diseñado para bartenders profesionales que buscan
+                  destacar sus servicios y captar clientes para eventos
+                  exclusivos. Permite mostrar menús de coctelería, paquetes
+                  personalizados y experiencias únicas, además de facilitar la
+                  reserva de fechas en línea. Optimizado para generar impacto
+                  visual, transmitir confianza y convertir visitas en
+                  contrataciones para eventos sociales y corporativos.
+                </p>
+                <div class="result-footer">
+                  <a
+                    href="https://rodrigovargas.vercel.app/"
+                    class="result-link"
+                    target="_blank"
+                  >
+                    Ver demo ↗
+                  </a>
+                  <button class="like-btn" data-project="vargas">
+                    <svg class="heart-icon" viewBox="0 0 24 24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      ></path>
+                    </svg>
+                    <span class="like-count">0</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="result-card reveal">
+              <div class="result-visual">
+                <img src="unas.png" alt="Sistema Web" class="result-img-full" />
+              </div>
+              <div class="result-info">
+                <span class="result-badge">Landing Page</span>
+                <h3>Salón de Manicure & Pedicure</h3>
+                <p>
+                  Landing page diseñada para salones profesionales de manicure y
+                  pedicure que buscan atraer más clientas y destacar sus
+                  servicios. Permite mostrar catálogos de diseños, promociones y
+                  paquetes de belleza, además de facilitar la reserva de citas
+                  en línea de forma rápida y sencilla. Optimizada para
+                  transmitir elegancia, confianza y brindar una experiencia
+                  visual atractiva que convierta visitas en reservas.
+                </p>
+                <div class="result-footer">
+                  <a
+                    href="https://elaynenails.netlify.app/"
+                    class="result-link"
+                    target="_blank"
+                  >
+                    Ver demo ↗
+                  </a>
+                  <button class="like-btn" data-project="nails">
+                    <svg class="heart-icon" viewBox="0 0 24 24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      ></path>
+                    </svg>
+                    <span class="like-count">0</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="result-card reveal">
+              <div class="result-visual">
+                <img
+                  src="Noataria.png"
+                  alt="Sistema Web"
+                  class="result-img-full"
+                />
+              </div>
+              <div class="result-info">
+                <span class="result-badge">Landing Page</span>
+                <h3>Notaría</h3>
+                <p>
+                  Landing page diseñada para notarías que buscan proyectar
+                  confianza, profesionalismo y captar nuevos clientes. Permite
+                  mostrar servicios notariales, requisitos, costos referenciales
+                  y facilitar la solicitud de citas en línea de manera rápida y
+                  segura. Optimizada para brindar claridad en la información,
+                  mejorar la atención al cliente y convertir visitas en trámites
+                  efectivos.
+                </p>
+                <div class="result-footer">
+                  <a
+                    href="https://notaria-lamolina.netlify.app/"
+                    class="result-link"
+                    target="_blank"
+                  >
+                    Ver demo ↗
+                  </a>
+                  <button class="like-btn" data-project="notaria">
+                    <svg class="heart-icon" viewBox="0 0 24 24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      ></path>
+                    </svg>
+                    <span class="like-count">0</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 8 -->
+            <div class="result-card reveal">
+              <div class="result-visual">
+                <img
+                  src="policlinico.png"
+                  alt="Sistema Web"
+                  class="result-img-full"
+                />
+              </div>
+              <div class="result-info">
+                <span class="result-badge">Landing Page</span>
+                <h3>Policlínico</h3>
+                <p>
+                  Landing page diseñada para policlínicos que buscan brindar
+                  información clara sobre sus especialidades médicas y captar
+                  nuevos pacientes. Permite mostrar servicios de salud, staff
+                  médico, horarios de atención y facilitar la reserva de citas
+                  en línea de manera rápida y segura. Optimizada para transmitir
+                  confianza, profesionalismo y mejorar la experiencia del
+                  paciente desde el primer contacto.
+                </p>
+                <div class="result-footer">
+                  <a
+                    href="https://policlinico-sanmartin.netlify.app/"
+                    class="result-link"
+                    target="_blank"
+                  >
+                    Ver demo ↗
+                  </a>
+                  <button class="like-btn" data-project="policlinico">
+                    <svg class="heart-icon" viewBox="0 0 24 24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      ></path>
+                    </svg>
+                    <span class="like-count">0</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 9 -->
+            <div class="result-card reveal">
+              <div class="result-visual">
+                <img
+                  src="menu.webp"
+                  alt="Sistema Web"
+                  class="result-img-full"
+                />
+              </div>
+              <div class="result-info">
+                <span class="result-badge">Sistema SaaS</span>
+                <h3>MenuClick</h3>
+                <p>
+                  Plataforma SaaS diseñada para restaurantes que desean
+                  digitalizar su carta de menú y mejorar la experiencia del
+                  cliente mediante códigos QR. Permite visualizar menús en
+                  tiempo real desde cualquier dispositivo, actualizar productos
+                  fácilmente y reducir el uso de cartas físicas. Optimizada para
+                  agilizar pedidos, mejorar la presentación del negocio y
+                  ofrecer una experiencia moderna, rápida y sin contacto.
+                </p>
+                <div class="result-footer">
+                  <a
+                    href="https://menu-click.vercel.app/"
+                    class="result-link"
+                    target="_blank"
+                  >
+                    Ver demo ↗
+                  </a>
+                  <button class="like-btn" data-project="menuclick">
+                    <svg class="heart-icon" viewBox="0 0 24 24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      ></path>
+                    </svg>
+                    <span class="like-count">0</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 10 -->
+            <div class="result-card reveal">
+              <div class="result-visual">
+                <img
+                  src="store.webp"
+                  alt="Sistema Web"
+                  class="result-img-full"
+                />
+              </div>
+              <div class="result-info">
+                <span class="result-badge">Sistema SaaS</span>
+                <h3>StoreClick</h3>
+                <p>
+                  Plataforma SaaS diseñada para crear y gestionar tiendas
+                  virtuales de forma rápida y profesional, sin necesidad de
+                  conocimientos técnicos. Permite administrar productos, pedidos
+                  y clientes desde un solo lugar, con interfaces optimizadas
+                  para maximizar conversiones y ventas. Incluye herramientas
+                  para personalización, pagos en línea y una experiencia de
+                  compra fluida, ideal para emprendedores y negocios que buscan
+                  escalar en el mundo digital.
+                </p>
+                <div class="result-footer">
+                  <a
+                    href="https://click-store-weld.vercel.app/"
+                    class="result-link"
+                    target="_blank"
+                  >
+                    Ver demo ↗
+                  </a>
+                  <button class="like-btn" data-project="storeclick">
+                    <svg class="heart-icon" viewBox="0 0 24 24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      ></path>
+                    </svg>
+                    <span class="like-count">0</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 11 -->
+            <div class="result-card reveal">
+              <div class="result-visual">
+                <img
+                  src="app1.webp"
+                  alt="Sistema Web"
+                  class="result-img-full"
+                />
+              </div>
+              <div class="result-info">
+                <span class="result-badge">Landing Page</span>
+                <h3>A&EM INSTALACIONES DE GAS NATURAL</h3>
+                <p>
+                  Landing page diseñada para empresas instaladoras de gas
+                  natural que buscan generar confianza y captar nuevos clientes.
+                  Permite mostrar servicios de instalación, mantenimiento y
+                  certificación, así como detallar procesos, beneficios y
+                  normativas de seguridad. Optimizada para transmitir
+                  profesionalismo, garantizar tranquilidad al cliente y
+                  facilitar el contacto o solicitud de cotizaciones de manera
+                  rápida y efectiva.
+                </p>
+                <div class="result-footer">
+                  <a
+                    href="https://ayem-bonogas.netlify.app/"
+                    class="result-link"
+                    target="_blank"
+                  >
+                    Ver demo ↗
+                  </a>
+                  <button class="like-btn" data-project="ayem">
+                    <svg class="heart-icon" viewBox="0 0 24 24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      ></path>
+                    </svg>
+                    <span class="like-count">0</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 12 -->
+            <div class="result-card reveal">
+              <div class="result-visual">
+                <img
+                  src="tech.webp"
+                  alt="Sistema Web"
+                  class="result-img-full"
+                />
+              </div>
+              <div class="result-info">
+                <span class="result-badge">Tienda Virtual</span>
+                <h3>Tech Store's</h3>
+                <p>
+  Tienda virtual diseñada para marcas y negocios que buscan maximizar sus ventas online y ofrecer una experiencia de compra moderna, rápida y segura. Permite exhibir productos de forma atractiva con imágenes de alta calidad, descripciones optimizadas y precios claros, además de integrar carrito de compras, múltiples métodos de pago y gestión de pedidos en tiempo real. Optimizada para generar confianza, mejorar la tasa de conversión y facilitar que los clientes encuentren, elijan y compren productos de manera sencilla desde cualquier dispositivo.
+</p>
+                <div class="result-footer">
+                  <a
+                    href="https://click-store-weld.vercel.app/?store=tech-store%27s"
+                    class="result-link"
+                    target="_blank"
+                  >
+                    Ver demo ↗
+                  </a>
+                  <button class="like-btn" data-project="ayem">
+                    <svg class="heart-icon" viewBox="0 0 24 24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      ></path>
+                    </svg>
+                    <span class="like-count">0</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Project 13 -->
+            <div class="result-card reveal">
+              <div class="result-visual">
+                <img
+                  src="pidemathias.webp"
+                  alt="Sistema Web"
+                  class="result-img-full"
+                />
+              </div>
+              <div class="result-info">
+                <span class="result-badge">Menu Digital QR</span>
+                <h3>Fats Food Mathias</h3>
+                <p>
+  Menú digital con código QR diseñado para restaurantes y negocios gastronómicos que buscan agilizar la atención y aumentar sus ventas. Permite a los clientes acceder al menú desde su celular sin necesidad de contacto físico, visualizar productos con imágenes atractivas, descripciones claras y precios actualizados en tiempo real. Integra sistema de pedidos y gestión de compras, facilitando la toma de órdenes de manera rápida, reduciendo errores y optimizando el flujo de atención. Optimizado para brindar una experiencia moderna, segura y eficiente que mejora la rotación de clientes y potencia las ventas.
+</p>
+                <div class="result-footer">
+                  <a
+                    href="https://pide-click.vercel.app/index.html?b=fastfood_mathias"
+                    class="result-link"
+                    target="_blank"
+                  >
+                    Ver demo ↗
+                  </a>
+                  <button class="like-btn" data-project="ayem">
+                    <svg class="heart-icon" viewBox="0 0 24 24">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                      ></path>
+                    </svg>
+                    <span class="like-count">0</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA SECTION IN PORTFOLIO (INGENIERÍA DE ACTIVACIÓN) -->
+      <section class="offer-section">
+        <div class="section-inner">
+          <div class="offer-card reveal">
             <h2 class="section-title">
-                Convierte tu web en un sistema que <br>
-                <span class="accent-text">genere clientes de forma automática</span>
+              Convierte tu web en un sistema que <br />
+              <span class="accent-text"
+                >genere clientes de forma automática</span
+              >
             </h2>
 
-            <p class="hero-tagline" style="margin: 0 auto 3rem; text-align: center;">
-                Diseñamos plataformas optimizadas para transformar visitas en ventas. 
-                Si tu negocio aún no tiene un sistema de conversión, estás perdiendo oportunidades cada día.
+            <p
+              class="hero-tagline"
+              style="margin: 0 auto 3rem; text-align: center"
+            >
+              Diseñamos plataformas optimizadas para transformar visitas en
+              ventas. Si tu negocio aún no tiene un sistema de conversión, estás
+              perdiendo oportunidades cada día.
             </p>
 
-            <div class="hero-buttons" style="justify-content: center;">
-                <a href="https://wa.me/972498691?text=🚀%20Hola,%20quiero%20convertir%20mi%20web%20en%20un%20sistema%20que%20genere%20clientes" 
-                   class="btn btn-primary" target="_blank" rel="noopener">
-                    🚀 Activar mi sistema ahora
-                </a>
+            <div class="hero-buttons" style="justify-content: center">
+              <a
+                href="https://wa.me/972498691?text=🚀%20Hola,%20quiero%20convertir%20mi%20web%20en%20un%20sistema%20que%20genere%20clientes"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener"
+              >
+                🚀 Activar mi sistema ahora
+              </a>
             </div>
 
-            <p style="margin-top: 1rem; font-size: 0.85rem; color: #888; text-align:center;">
-                Respuesta rápida • Diagnóstico sin compromiso
+            <p
+              style="
+                margin-top: 1rem;
+                font-size: 0.85rem;
+                color: #888;
+                text-align: center;
+              "
+            >
+              Respuesta rápida • Diagnóstico sin compromiso
             </p>
-
+          </div>
         </div>
-
-    </div>
-</section>
+      </section>
     </main>
 
     <footer class="elite-footer">
-        <div class="footer-grid">
-            <div class="footer-col reveal">
-                <div class="nav-logo" style="margin-bottom: 2rem; display: block;">
-                    <svg viewBox="0 0 200 40" class="logo-svg">
-                        <defs>
-                            <linearGradient id="logoGradFooterGold" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#00A8E8;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <text x="0" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="28" fill="url(#logoGradFooterGold)">DM Webs</text>
-                    </svg>
-                </div>
-                <p class="footer-desc">
-                    Ingeniería web orientada a conversión. Diseñamos sistemas digitales que transforman tráfico en clientes.
-                </p>
-            </div>
-            <div class="footer-col reveal">
-                <h4>Navegación</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html#home">Inicio</a></li>
-                    <li><a href="index.html#soluciones">Sistemas Web</a></li>
-                    <li><a href="portafolio.html">Resultados</a></li>
-                    <li><a href="index.html#faq">Consultoría</a></li>
-                </ul>
-            </div>
-            <div class="footer-col reveal">
-                <h4>Activar Sistema</h4>
-                <a href="https://wa.me/972498691?text=🚀%20Hola,%20quiero%20un%20sistema%20web%20que%20genere%20clientes" class="footer-cta-btn" target="_blank">
-                    🚀 Iniciar proyecto
-                </a>
-            </div>
+      <div class="footer-grid">
+        <div class="footer-col reveal">
+          <div class="nav-logo" style="margin-bottom: 2rem; display: block">
+            <svg viewBox="0 0 200 40" class="logo-svg">
+              <defs>
+                <linearGradient
+                  id="logoGradFooterGold"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style="stop-color: #ffffff; stop-opacity: 1"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color: #00a8e8; stop-opacity: 1"
+                  />
+                </linearGradient>
+              </defs>
+              <text
+                x="0"
+                y="30"
+                font-family="'Plus Jakarta Sans', sans-serif"
+                font-weight="900"
+                font-size="28"
+                fill="url(#logoGradFooterGold)"
+              >
+                DM Webs
+              </text>
+            </svg>
+          </div>
+          <p class="footer-desc">
+            Ingeniería web orientada a conversión. Diseñamos sistemas digitales
+            que transforman tráfico en clientes.
+          </p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 DM Webs. Sistemas diseñados para generar clientes.</p>
+        <div class="footer-col reveal">
+          <h4>Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#home">Inicio</a></li>
+            <li><a href="index.html#soluciones">Sistemas Web</a></li>
+            <li><a href="portafolio.html">Resultados</a></li>
+            <li><a href="index.html#faq">Consultoría</a></li>
+          </ul>
         </div>
+        <div class="footer-col reveal">
+          <h4>Activar Sistema</h4>
+          <a
+            href="https://wa.me/972498691?text=🚀%20Hola,%20quiero%20un%20sistema%20web%20que%20genere%20clientes"
+            class="footer-cta-btn"
+            target="_blank"
+          >
+            🚀 Iniciar proyecto
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 DM Webs. Sistemas diseñados para generar clientes.</p>
+      </div>
     </footer>
 
     <!-- ADVISOR CHATBOT ELITE -->
     <div class="chatbot-toggle" id="chatbotToggle">
-        <span style="font-size:1.4rem; line-height:1;">🤖</span>
+      <span style="font-size: 1.4rem; line-height: 1">🤖</span>
     </div>
 
     <div class="chatbot-window" id="chatbotWindow">
-        <div class="chatbot-header">
-            <div style="display:flex; align-items:center; gap:0.75rem;">
-                <div style="width:38px;height:38px;border-radius:10px;background:var(--gradient-blue);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.4rem;">
-                    🤖
-                </div>
-                <div>
-                    <h4 style="font-weight:800;font-size:0.9rem;line-height:1.2;">DM Webs AI</h4>
-                    <p style="font-size:0.7rem;color:#25d366;display:flex;align-items:center;gap:4px;">
-                        <span style="width:6px;height:6px;background:#25d366;border-radius:50%;display:inline-block;animation:statusFade 2s infinite;"></span>
-                        Sistema activo
-                    </p>
-                </div>
-            </div>
-            <button class="chatbot-close" id="chatbotClose" aria-label="Cerrar chat">✕</button>
+      <div class="chatbot-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem">
+          <div
+            style="
+              width: 38px;
+              height: 38px;
+              border-radius: 10px;
+              background: var(--gradient-blue);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-shrink: 0;
+              font-size: 1.4rem;
+            "
+          >
+            🤖
+          </div>
+          <div>
+            <h4 style="font-weight: 800; font-size: 0.9rem; line-height: 1.2">
+              DM Webs AI
+            </h4>
+            <p
+              style="
+                font-size: 0.7rem;
+                color: #25d366;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+              "
+            >
+              <span
+                style="
+                  width: 6px;
+                  height: 6px;
+                  background: #25d366;
+                  border-radius: 50%;
+                  display: inline-block;
+                  animation: statusFade 2s infinite;
+                "
+              ></span>
+              Sistema activo
+            </p>
+          </div>
         </div>
-        <div class="chatbot-messages" id="chatbotMessages"></div>
-        <div class="chatbot-input-area">
-            <textarea id="chatbotInput" placeholder="Escribe tu consulta estratégica..." rows="1"></textarea>
-            <button id="chatbotSend" style="background:transparent; border:none; color:var(--accent); cursor:pointer;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;">
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
-            </button>
-        </div>
+        <button
+          class="chatbot-close"
+          id="chatbotClose"
+          aria-label="Cerrar chat"
+        >
+          ✕
+        </button>
+      </div>
+      <div class="chatbot-messages" id="chatbotMessages"></div>
+      <div class="chatbot-input-area">
+        <textarea
+          id="chatbotInput"
+          placeholder="Escribe tu consulta estratégica..."
+          rows="1"
+        ></textarea>
+        <button
+          id="chatbotSend"
+          style="
+            background: transparent;
+            border: none;
+            color: var(--accent);
+            cursor: pointer;
+          "
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="width: 24px"
+          >
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
     </div>
 
     <script src="app.js" defer></script>
     <script src="appChat.js" defer></script>
-</body>
+  </body>
 </html>
